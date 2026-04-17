@@ -1,0 +1,12 @@
+{
+  "name": "Harmonium Halt",
+  "short_name": "Harmonium Halt",
+  "description": "Play Online Web Harmonium, Learn Easily, Practice Daily",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1008",
+  "theme_color": "#8d203d",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

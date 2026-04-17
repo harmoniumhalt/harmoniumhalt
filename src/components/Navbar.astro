@@ -1,0 +1,107 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/lessons', label: 'Lessons' },
+  { href: '/practice', label: 'Practice' },
+  { href: '/notes', label: 'Notes' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-ebony/95 backdrop-blur-sm border-b border-gold-500/20">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 bg-gradient-to-br from-saffron-400 to-burgundy-700 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-saffron-500/30 transition-shadow">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="14" width="2" height="6" rx="1" fill="white"/>
+            <rect x="5" y="12" width="2" height="8" rx="1" fill="white"/>
+            <rect x="8" y="14" width="2" height="6" rx="1" fill="white"/>
+            <rect x="11" y="11" width="2" height="9" rx="1" fill="white"/>
+            <rect x="14" y="14" width="2" height="6" rx="1" fill="white"/>
+            <rect x="17" y="12" width="2" height="8" rx="1" fill="white"/>
+            <rect x="20" y="14" width="2" height="6" rx="1" fill="white"/>
+            <rect x="4" y="9" width="1.5" height="5" rx="0.75" fill="rgba(255,200,100,0.8)"/>
+            <rect x="7" y="9" width="1.5" height="5" rx="0.75" fill="rgba(255,200,100,0.8)"/>
+            <rect x="13" y="8" width="1.5" height="6" rx="0.75" fill="rgba(255,200,100,0.8)"/>
+            <rect x="16" y="9" width="1.5" height="5" rx="0.75" fill="rgba(255,200,100,0.8)"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <span class="block font-display font-bold text-gold-400 text-lg tracking-tight leading-none">Harmonium</span>
+          <span class="block font-display text-ivory/70 text-xs tracking-widest uppercase">Halt</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-1">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class="px-3 py-2 text-sm font-medium text-ivory/70 hover:text-gold-400 rounded-md hover:bg-white/5 transition-all duration-200"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA + Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <a
+          href="/practice"
+          class="hidden sm:inline-flex items-center gap-1.5 bg-gradient-to-r from-saffron-500 to-saffron-600 hover:from-saffron-400 hover:to-saffron-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-lg shadow-saffron-500/20"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Play Now
+        </a>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-ivory/70 hover:text-gold-400 p-2"
+          aria-label="Toggle menu"
+        >
+          <svg id="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg id="close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-white/10 mt-2 pt-3">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="block px-3 py-2.5 text-sm font-medium text-ivory/70 hover:text-gold-400 hover:bg-white/5 rounded-md transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="/practice" class="mt-3 block text-center bg-saffron-500 text-white font-semibold py-2.5 rounded-lg text-sm">
+        🎵 Play Harmonium
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+const btn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
+
+btn?.addEventListener('click', () => {
+  const isHidden = menu?.classList.toggle('hidden');
+  menuIcon?.classList.toggle('hidden', !isHidden);
+  closeIcon?.classList.toggle('hidden', isHidden);
+});
+</script>

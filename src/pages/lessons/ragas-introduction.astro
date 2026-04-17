@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Introduction to Ragas — What is a Raga? | Harmonium Halt"
+  description="Learn what a raga is in Indian classical music. Aroha, avaroha, vadi, samvadi, pakad, time theory — all explained clearly for harmonium beginners."
+>
+  <div class="bg-white border-b border-ebony/8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
+      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
+      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
+      <span class="text-ebony/70">Introduction to Ragas</span>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="text-xs font-semibold bg-saffron-100 text-saffron-700 px-3 py-1 rounded-full">Intermediate</span>
+        <span class="text-xs text-ebony/40">⏱ 25 min</span>
+      </div>
+      <h1 class="font-display font-black text-4xl text-ebony mb-3">Introduction to Ragas</h1>
+      <p class="text-xl text-ebony/60 leading-relaxed">Ragas are the soul of Indian classical music. Understanding them will transform how you hear and play the harmonium.</p>
+    </div>
+
+    <div class="prose-harmonium">
+      <h2>What is a Raga?</h2>
+      <p>A <strong>raga</strong> (राग) is not simply a scale or a melody — it is a complete musical framework that governs which notes to use, how to move between them, which notes are emphasized, the characteristic phrases that define it, and even the time of day and season when it should be performed.</p>
+      <p>The word raga comes from the Sanskrit root <em>ranj</em>, meaning "to color" or "to please." A raga colors the mind of the listener with a specific emotion (rasa) — peace, devotion, longing, joy, or grandeur.</p>
+
+      <h2>Key Concepts of a Raga</h2>
+
+      <div class="not-prose grid sm:grid-cols-2 gap-4 my-6">
+        {[
+          { term: 'Aroha (Arohana)', meaning: 'Ascending scale — the notes used going up from Sa to Sa' },
+          { term: 'Avaroha (Avarohana)', meaning: 'Descending scale — the notes used going down from Sa to Sa' },
+          { term: 'Vadi', meaning: 'The most important note of the raga — used most frequently' },
+          { term: 'Samvadi', meaning: 'The second most important note, usually a fourth or fifth from Vadi' },
+          { term: 'Pakad', meaning: 'Characteristic catch phrase — a short melodic phrase that identifies the raga' },
+          { term: 'Gamak / Meend', meaning: 'Ornaments — rapid oscillations (gamak) or slides between notes (meend)' },
+          { term: 'Rasa', meaning: 'The emotional quality/mood evoked by the raga' },
+          { term: 'Prahar', meaning: 'Time of day when the raga is traditionally performed' },
+        ].map(c => (
+          <div class="bg-ivory border border-ebony/8 rounded-xl p-4">
+            <h4 class="font-bold text-saffron-700 text-sm mb-1">{c.term}</h4>
+            <p class="text-sm text-ebony/70">{c.meaning}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>Raga Time Theory (Prahar System)</h2>
+      <p>One of the most beautiful aspects of Indian classical music is that each raga is associated with a specific time of day or season. This is not merely tradition — it reflects a deep understanding of how sound affects the human mind and body at different times.</p>
+
+      <div class="not-prose overflow-x-auto my-4">
+        <table class="w-full text-sm">
+          <thead class="bg-saffron-50">
+            <tr>
+              <th class="text-left p-3 border border-saffron-100 font-semibold text-saffron-800">Time of Day</th>
+              <th class="text-left p-3 border border-saffron-100 font-semibold text-saffron-800">Example Ragas</th>
+              <th class="text-left p-3 border border-saffron-100 font-semibold text-saffron-800">Mood</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Early Morning (4–7 AM)', 'Bhairav, Lalit, Todi', 'Devotional, peaceful, majestic'],
+              ['Morning (7–10 AM)', 'Bhairavi, Asavari, Jaunpuri', 'Serene, gentle, emotional'],
+              ['Late Morning (10 AM–1 PM)', 'Sarang, Bhimpalasi', 'Playful, light, joyful'],
+              ['Afternoon (1–4 PM)', 'Multani, Madhuvanti', 'Deep, serious, contemplative'],
+              ['Evening (4–7 PM)', 'Yaman, Poorvi, Marwa', 'Romantic, longing, meditative'],
+              ['Night (7–10 PM)', 'Yaman Kalyan, Kedar', 'Devotional, peaceful, expansive'],
+              ['Late Night (10 PM–1 AM)', 'Darbari, Bageshri, Miya ki Malhar', 'Grand, profound, emotional'],
+              ['All Times', 'Bhairavi, Kafi', 'Universal appeal'],
+            ].map(([time, ragas, mood], i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-ebony/2'}>
+                <td class="p-3 border border-ebony/6 font-medium text-ebony/80">{time}</td>
+                <td class="p-3 border border-ebony/6 text-saffron-700 font-medium">{ragas}</td>
+                <td class="p-3 border border-ebony/6 text-ebony/60 italic">{mood}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Your First Raga: Yaman</h2>
+      <p>Raga Yaman is the ideal first raga for harmonium students. It is performed in the early evening (sunset time), evokes a romantic, yearning mood, and uses all the natural swaras plus one sharp — Tivra Ma (F#).</p>
+
+      <div class="not-prose bg-gradient-to-br from-indigo-900 to-ebony text-white rounded-xl p-6 my-6">
+        <h3 class="font-display font-bold text-gold-400 mb-4">Raga Yaman — At a Glance</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm">
+          <div><span class="text-ivory/50 text-xs">Aroha</span><p class="font-mono text-saffron-300 mt-1">N R G M̈ P D N Ṡ</p></div>
+          <div><span class="text-ivory/50 text-xs">Avaroha</span><p class="font-mono text-saffron-300 mt-1">Ṡ N D P M̈ G R G R S</p></div>
+          <div><span class="text-ivory/50 text-xs">Vadi</span><p class="font-mono text-gold-400 mt-1">Ga (E)</p></div>
+          <div><span class="text-ivory/50 text-xs">Samvadi</span><p class="font-mono text-gold-400 mt-1">Ni (B)</p></div>
+          <div><span class="text-ivory/50 text-xs">Pakad</span><p class="font-mono text-saffron-300 mt-1">N R G, R G, M̈ G R S</p></div>
+          <div><span class="text-ivory/50 text-xs">Time</span><p class="text-ivory/80 mt-1">Evening (6–9 PM)</p></div>
+        </div>
+        <a href="/lessons/raga-yaman" class="mt-4 inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors">
+          Learn Raga Yaman in Full →
+        </a>
+      </div>
+
+      <h2>How to Approach Learning a Raga</h2>
+      <ol>
+        <li><strong>Memorize aroha-avaroha:</strong> Practice ascending and descending scales until they're automatic</li>
+        <li><strong>Listen extensively:</strong> Find recordings of the raga on YouTube and listen repeatedly</li>
+        <li><strong>Learn the pakad:</strong> Master the characteristic phrase that identifies the raga</li>
+        <li><strong>Slow improvisation:</strong> Move slowly within the raga's framework, emphasizing vadi and samvadi</li>
+        <li><strong>Learn a composition:</strong> A fixed bandish (composition) gives structure to your playing</li>
+      </ol>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-between mt-10">
+      <a href="/lessons/alankars" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Previous: Alankars
+      </a>
+      <a href="/lessons/raga-yaman" class="flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all">
+        Next: Raga Yaman →
+      </a>
+    </div>
+  </div>
+</Layout>
