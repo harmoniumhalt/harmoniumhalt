@@ -2,52 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-<Layout
-  title="Taal and Rhythm for Harmonium | Harmonium Halt"
-  description="Taal and Rhythm for Harmonium — Free harmonium lesson with interactive practice tool. Learn harmonium online at Harmonium Halt."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Taal and Rhythm for Harmonium</span>
+<Layout title="Taal and Rhythm for Harmonium | Harmonium Halt"
+  description="Master the rhythmic framework of Indian music and how harmonium fits within taal cycles. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Taal and Rhythm for Harmonium</span>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-saffron-100 text-saffron-700 px-3 py-1 rounded-full">Intermediate</span>
-        <span class="text-xs text-ebony/40">⏱ 35 min</span>
-        <span class="text-xs text-ebony/40">Intermediate</span>
+        <span class="badge badge-intermediate capitalize">intermediate</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 35 min · Intermediate</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Taal and Rhythm for Harmonium</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">A detailed lesson on Taal and Rhythm for Harmonium for harmonium students. Practice concepts directly using our interactive web harmonium below.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Taal and Rhythm for Harmonium</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Master the rhythmic framework of Indian music and how harmonium fits within taal cycles.</p>
     </div>
-    <div class="prose-harmonium">
-      <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-6">
-        <p class="text-sm text-saffron-800">🎹 This lesson includes an <strong>interactive harmonium</strong> below. Scroll down to practice immediately after reading each section.</p>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Taal = fixed rhythmic cycle that repeats continuously</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Teentaal = 16 beats — the most common taal</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Sam = beat 1 — the most important beat</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Keherwa = 8 beats — used for bhajans</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Develop internal rhythm before playing with tabla</li>
+      </ul>
+    </div>
+    <div class="prose-hm">
+      <h2>What is Taal</h2>
+      <p>Taal (rhythmic cycle) is the foundation of all Indian music. Like a wheel that keeps turning a taal repeats its fixed pattern continuously throughout a performance. The harmonium player must always know where they are within the taal — which beat which section and crucially where the Sam (first beat) is. Losing the taal is one of the most serious musical errors.</p>
+
+      <h2>Teentaal — 16 Beats</h2>
+      <p>Teentaal is the most important taal with 16 beats divided into 4 sections of 4 beats: Dha Dhin Dhin Dha bar Dha Dhin Dhin Dha bar Na Tin Tin Ta bar Ta Dhin Dhin Dha. The first beat (Dha) is Sam — the point of resolution. Practice clapping Teentaal while playing Sa on each Sam. Once comfortable add simple scale playing within the taal framework.</p>
+
+      <h2>Keherwa — 8 Beats</h2>
+      <p>Keherwa has 8 beats: Dha Ge Na Ti Na Ka Dhi Na. It is the standard taal for bhajans folk songs and devotional music. If you have ever clapped along to a bhajan you were likely feeling Keherwa or a variant. Practice Keherwa by tapping your foot on beats 1 and 5 (Sam and midpoint) while playing simple bhajan melodies.</p>
+
+      <h2>Playing with a Metronome</h2>
+      <p>Before playing with a tabla develop your internal rhythm using a metronome set to 60 BPM. Practice scales and alankars strictly in time never rushing or slowing. The metronome is your most honest teacher showing exactly where your rhythm wavers. Students who develop metronomic precision progress far faster when they eventually play with tabla.</p>
+
+      <h2>Harmonium with Tabla</h2>
+      <p>When playing with tabla listen actively and lock your playing to the tabla player's beat. On Sam both instruments must arrive together cleanly — this requires anticipating Sam slightly before it arrives. Practice by clapping Teentaal with your left hand while playing Sa Re Ga patterns with your right hand. This builds simultaneous rhythm and melody awareness.</p>
+
+    </div>
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
-      <h2>Overview</h2>
-      <p>This lesson covers Taal and Rhythm for Harmonium in depth. It is part of the Intermediate curriculum at Harmonium Halt, designed to give you a clear, practical understanding with immediate application on the harmonium.</p>
-      <h2>Core Concepts</h2>
-      <p>Work through each concept carefully, then use the harmonium tool at the bottom of the page to practice what you've learned. Consistent application is the key to rapid progress.</p>
-      <h2>Practice Exercises</h2>
-      <p>Use the web harmonium below to practice the exercises in this lesson. Start slowly, then gradually increase your speed as the patterns become comfortable.</p>
     </div>
-    <div class="mt-8 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
-      </div>
-    </div>
-    <div class="flex justify-between mt-8">
-      <a href="/lessons" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         All Lessons
       </a>
-      <a href="/practice" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all text-sm">
-        Full Practice Tool →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

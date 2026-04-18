@@ -2,115 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-
-<Layout
-  title="Sa Re Ga Ma — Learn the Seven Swaras on Harmonium | Harmonium Halt"
-  description="Learn the seven swaras (Sa Re Ga Ma Pa Dha Ni) on harmonium. Includes keyboard mapping, practice exercises, and embedded web harmonium to practice immediately."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Sa Re Ga Ma</span>
+<Layout title="Sa Re Ga Ma — Seven Swaras | Harmonium Halt"
+  description="Master India's musical alphabet — the seven swaras that form the foundation of all music. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Sa Re Ga Ma — Seven Swaras</span>
     </div>
   </div>
-
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full">Beginner</span>
-        <span class="text-xs text-ebony/40">⏱ 20 min</span>
-        <span class="text-xs text-ebony/40">Lesson 2 of 8</span>
+        <span class="badge badge-beginner capitalize">beginner</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 20 min · Lesson 3 of 8</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Sa Re Ga Ma — The Seven Swaras</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">Master India's musical alphabet. The seven swaras are the foundation of every raga, bhajan, and composition you'll ever play.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Sa Re Ga Ma — Seven Swaras</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Master India's musical alphabet — the seven swaras that form the foundation of all music.</p>
     </div>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Seven swaras: Sa Re Ga Ma Pa Dha Ni</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Sa and Pa are achala (fixed) — never altered</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Ascending (aroha): A S D F G H J K on keyboard</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Descending (avaroha): K J H G F D S A on keyboard</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Always sing swara names while playing them</li>
+      </ul>
+    </div>
+    <div class="prose-hm">
+      <h2>The Seven Swaras</h2>
+      <p>Indian classical music uses seven fundamental notes called swaras. Their full Sanskrit names are Shadja (Sa), Rishabh (Re), Gandhar (Ga), Madhyama (Ma), Pancham (Pa), Dhaivat (Dha), and Nishad (Ni). These correspond to Western notes C D E F G A B. After Ni the cycle repeats — the next note is Sa one octave higher.</p>
 
-    <div class="prose-harmonium">
-      <h2>The Sapta Swara (Seven Swaras)</h2>
-      <p>Indian classical music uses seven fundamental notes called <em>swaras</em>. They form a cycle — after the seventh (Ni), the eighth note is Sa again, one octave higher. This cycle is called a <em>saptak</em> (octave).</p>
+      <h2>Ascending Scale Practice</h2>
+      <p>Play each swara clearly and hold it for one beat saying the name aloud: Sa... Re... Ga... Ma... Pa... Dha... Ni... Sa. On the web harmonium use keyboard keys A S D F G H J K. Repeat this ascending scale 10 times slowly before increasing speed. Focus on even timing and equal volume on each note.</p>
 
-      <!-- Visual swara map -->
-      <div class="not-prose my-6 grid grid-cols-7 gap-2">
-        {[
-          { sw: 'Sa', dev: 'सा', key: 'A', w: 'C', color: 'bg-red-100 border-red-300 text-red-800' },
-          { sw: 'Re', dev: 'रे', key: 'S', w: 'D', color: 'bg-orange-100 border-orange-300 text-orange-800' },
-          { sw: 'Ga', dev: 'ग', key: 'D', w: 'E', color: 'bg-yellow-100 border-yellow-300 text-yellow-800' },
-          { sw: 'Ma', dev: 'म', key: 'F', w: 'F', color: 'bg-green-100 border-green-300 text-green-800' },
-          { sw: 'Pa', dev: 'प', key: 'G', w: 'G', color: 'bg-blue-100 border-blue-300 text-blue-800' },
-          { sw: 'Dha', dev: 'ध', key: 'H', w: 'A', color: 'bg-indigo-100 border-indigo-300 text-indigo-800' },
-          { sw: 'Ni', dev: 'नि', key: 'J', w: 'B', color: 'bg-purple-100 border-purple-300 text-purple-800' },
-        ].map(n => (
-          <div class={`rounded-lg border-2 p-2 text-center ${n.color}`}>
-            <div class="font-display font-bold text-sm">{n.sw}</div>
-            <div class="text-lg leading-tight">{n.dev}</div>
-            <div class="text-xs font-mono mt-1 opacity-70">{n.w}</div>
-            <div class="text-xs font-mono bg-white/60 rounded px-1 mt-1">{n.key}</div>
-          </div>
-        ))}
-      </div>
+      <h2>Descending Scale Practice</h2>
+      <p>Now reverse direction: Sa Ni Dha Pa Ma Ga Re Sa. Keys: K J H G F D S A. Many beginners find descending harder than ascending — this is completely normal. The descending scale trains different neural pathways and requires separate focused practice. Give descending equal time as ascending.</p>
 
-      <h2>Exercise 1: Ascending Scale (Arohana)</h2>
-      <p>Play the swaras one by one from Sa to Sa (upper). Press each key slowly and say the swara name out loud.</p>
-      <div class="not-prose bg-ebony/5 rounded-xl p-5 my-4 font-mono text-center">
-        <p class="text-2xl text-saffron-700 font-bold tracking-widest mb-2">Sa  Re  Ga  Ma  Pa  Dha  Ni  Ṡa</p>
-        <p class="text-sm text-ebony/50">Keys: &nbsp; A &nbsp;&nbsp; S &nbsp;&nbsp; D &nbsp;&nbsp; F &nbsp;&nbsp; G &nbsp;&nbsp; H &nbsp;&nbsp;&nbsp; J &nbsp;&nbsp;&nbsp; K</p>
-      </div>
-
-      <h2>Exercise 2: Descending Scale (Avarohana)</h2>
-      <p>Now reverse direction — come back down from the high Sa to the original Sa:</p>
-      <div class="not-prose bg-ebony/5 rounded-xl p-5 my-4 font-mono text-center">
-        <p class="text-2xl text-saffron-700 font-bold tracking-widest mb-2">Ṡa  Ni  Dha  Pa  Ma  Ga  Re  Sa</p>
-        <p class="text-sm text-ebony/50">Keys: &nbsp; K &nbsp;&nbsp; J &nbsp;&nbsp;&nbsp; H &nbsp;&nbsp;&nbsp; G &nbsp;&nbsp;&nbsp; F &nbsp;&nbsp;&nbsp; D &nbsp;&nbsp; S &nbsp;&nbsp;&nbsp; A</p>
-      </div>
-
-      <h2>Exercise 3: Sa-Pa (Perfect Fifth)</h2>
-      <p>Pa is the most harmonious note when played with Sa — it's the "perfect fifth" of Indian music. Practice this important interval:</p>
-      <div class="not-prose bg-saffron-50 rounded-xl p-5 my-4 font-mono text-center border border-saffron-200">
-        <p class="text-xl text-saffron-700 font-bold tracking-widest">Sa — Pa — Sa — Pa — Sa</p>
-        <p class="text-sm text-saffron-500 mt-1">A — G — A — G — A</p>
-      </div>
-
-      <h2>The Special Nature of Sa and Pa</h2>
-      <p><strong>Sa</strong> and <strong>Pa</strong> are called <em>achala swaras</em> (fixed notes). Unlike the other five swaras, they never become komal (flat) or tivra (sharp). They are always present in their pure form. Every raga in Indian classical music includes Sa, and almost all include Pa.</p>
+      <h2>The Sa Pa Interval</h2>
+      <p>Pa is the most harmonious note with Sa — the perfect fifth in Indian music. Play Sa (A) and Pa (G) together and listen to how naturally they blend. This Sa-Pa consonance is the foundation of the harmonium drone used in all classical accompaniment. Practice this interval until you can find Pa instantly.</p>
 
       <h2>Singing While Playing</h2>
-      <p>One of the most important exercises is to <strong>sing the swara names while playing them</strong>. This builds a deep neural connection between what you hear, what you say, and what your fingers do. Even if you're not a singer, sing softly while practicing. This habit will accelerate your musical development enormously.</p>
+      <p>The single most powerful practice habit is singing swara names while playing. Even if you are not a singer vocalize softly. This builds the crucial connection between what you hear what you say and what your fingers do. Musicians who develop this habit from the beginning progress noticeably faster than those who do not.</p>
 
-      <h2>Practice Goals for This Lesson</h2>
-      <div class="not-prose space-y-3 my-4">
-        {[
-          { goal: 'Play ascending scale 10 times without looking at keys', level: 'Day 1–2' },
-          { goal: 'Play descending scale 10 times', level: 'Day 2–3' },
-          { goal: 'Sing swara names while playing', level: 'Day 1 onwards' },
-          { goal: 'Play Sa-Re-Ga-Ma-Pa-Dha-Ni-Sa from memory', level: 'By end of week' },
-        ].map(g => (
-          <div class="flex gap-3 items-center bg-green-50 border border-green-200 rounded-lg p-3">
-            <div class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full font-semibold flex-shrink-0">{g.level}</div>
-            <p class="text-sm text-green-800">{g.goal}</p>
-          </div>
-        ))}
+    </div>
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
     </div>
-
-    <!-- Practice Harmonium -->
-    <div class="mt-8 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
-      <p class="text-ebony/60 text-sm mb-4">Use keys A S D F G H J K to play Sa Re Ga Ma Pa Dha Ni Sa.</p>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
-      </div>
-    </div>
-
-    <!-- Navigation -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-between">
-      <a href="/lessons/introduction-to-harmonium" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony transition-colors">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Previous: Intro to Harmonium
+        All Lessons
       </a>
-      <a href="/lessons/finger-placement" class="flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all">
-        Next: Finger Placement →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

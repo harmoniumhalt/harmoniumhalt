@@ -1,115 +1,92 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
-<Layout
-  title="Contact Harmonium Halt — Get in Touch"
-  description="Contact the Harmonium Halt team. Send us your questions, feedback, or collaboration requests. We'd love to hear from harmonium learners."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a>
-      <span class="mx-2">›</span>
-      <span class="text-ebony/70">Contact</span>
-    </div>
+<Layout title="Contact Harmonium Halt" description="Contact the Harmonium Halt team with questions, feedback, or collaboration requests.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb"><a href="/">Home</a><span class="mx-1.5">›</span><span>Contact</span></div>
   </div>
-
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="text-center mb-10">
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Contact Us</h1>
-      <p class="text-ebony/60 text-lg max-w-xl mx-auto">Have a question, suggestion, or want to collaborate? We'd love to hear from you.</p>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="text-center mb-8 sm:mb-10">
+      <h1 class="section-title text-3xl sm:text-4xl mb-3" style="color:#1c1008">Contact Us</h1>
+      <p class="text-sm sm:text-base" style="color:rgba(28,16,8,.55);font-family:'Plus Jakarta Sans',sans-serif">Have a question, suggestion, or want to collaborate?</p>
     </div>
-
-    <div class="grid md:grid-cols-2 gap-10">
-      <!-- Contact Form -->
-      <div class="bg-white rounded-2xl border border-ebony/8 shadow-sm p-8">
-        <h2 class="font-display font-bold text-xl text-ebony mb-6">Send a Message</h2>
-        <form class="space-y-4" id="contact-form">
+    <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+      <div class="bg-white rounded-2xl border p-6 sm:p-8" style="border-color:rgba(28,16,8,.08)">
+        <h2 class="font-display font-bold text-xl mb-5" style="color:#1c1008">Send a Message</h2>
+        <form class="space-y-4" id="cf" novalidate>
           <div>
-            <label class="block text-sm font-medium text-ebony/70 mb-1" for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name"
-              class="w-full px-4 py-2.5 rounded-lg border border-ebony/15 text-sm focus:outline-none focus:ring-2 focus:ring-saffron-400 focus:border-transparent transition-all" />
+            <label class="block text-xs font-bold mb-1.5" style="color:rgba(28,16,8,.7);font-family:'Plus Jakarta Sans',sans-serif" for="cn">Your Name</label>
+            <input type="text" id="cn" name="name" required placeholder="Enter your name"
+              class="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all"
+              style="border-color:rgba(28,16,8,.2);font-family:'Plus Jakarta Sans',sans-serif"
+              onfocus="this.style.borderColor='#c8360a';this.style.boxShadow='0 0 0 3px rgba(200,54,10,.1)'"
+              onblur="this.style.borderColor='rgba(28,16,8,.2)';this.style.boxShadow='none'"/>
           </div>
           <div>
-            <label class="block text-sm font-medium text-ebony/70 mb-1" for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com"
-              class="w-full px-4 py-2.5 rounded-lg border border-ebony/15 text-sm focus:outline-none focus:ring-2 focus:ring-saffron-400 focus:border-transparent transition-all" />
+            <label class="block text-xs font-bold mb-1.5" style="color:rgba(28,16,8,.7);font-family:'Plus Jakarta Sans',sans-serif" for="ce">Email Address</label>
+            <input type="email" id="ce" name="email" required placeholder="your@email.com"
+              class="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all"
+              style="border-color:rgba(28,16,8,.2);font-family:'Plus Jakarta Sans',sans-serif"
+              onfocus="this.style.borderColor='#c8360a';this.style.boxShadow='0 0 0 3px rgba(200,54,10,.1)'"
+              onblur="this.style.borderColor='rgba(28,16,8,.2)';this.style.boxShadow='none'"/>
           </div>
           <div>
-            <label class="block text-sm font-medium text-ebony/70 mb-1" for="subject">Subject</label>
-            <select id="subject" name="subject"
-              class="w-full px-4 py-2.5 rounded-lg border border-ebony/15 text-sm focus:outline-none focus:ring-2 focus:ring-saffron-400 bg-white">
-              <option>General Question</option>
-              <option>Lesson Feedback</option>
-              <option>Bug Report</option>
-              <option>Content Suggestion</option>
-              <option>Collaboration</option>
-              <option>Other</option>
+            <label class="block text-xs font-bold mb-1.5" style="color:rgba(28,16,8,.7);font-family:'Plus Jakarta Sans',sans-serif" for="cs">Subject</label>
+            <select id="cs" class="w-full px-4 py-2.5 rounded-xl border text-sm outline-none bg-white"
+              style="border-color:rgba(28,16,8,.2);font-family:'Plus Jakarta Sans',sans-serif">
+              <option>General Question</option><option>Lesson Feedback</option>
+              <option>Bug Report</option><option>Content Suggestion</option>
+              <option>Collaboration</option><option>Other</option>
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-ebony/70 mb-1" for="message">Message</label>
-            <textarea id="message" name="message" required rows="5" placeholder="Write your message here..."
-              class="w-full px-4 py-2.5 rounded-lg border border-ebony/15 text-sm focus:outline-none focus:ring-2 focus:ring-saffron-400 focus:border-transparent transition-all resize-none"></textarea>
+            <label class="block text-xs font-bold mb-1.5" style="color:rgba(28,16,8,.7);font-family:'Plus Jakarta Sans',sans-serif" for="cm">Message</label>
+            <textarea id="cm" rows="5" required placeholder="Write your message here..."
+              class="w-full px-4 py-2.5 rounded-xl border text-sm outline-none resize-none transition-all"
+              style="border-color:rgba(28,16,8,.2);font-family:'Plus Jakarta Sans',sans-serif"
+              onfocus="this.style.borderColor='#c8360a';this.style.boxShadow='0 0 0 3px rgba(200,54,10,.1)'"
+              onblur="this.style.borderColor='rgba(28,16,8,.2)';this.style.boxShadow='none'"></textarea>
           </div>
-          <button type="submit"
-            class="w-full bg-saffron-500 hover:bg-saffron-400 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-saffron-500/20">
-            Send Message →
-          </button>
+          <button type="submit" class="btn-primary w-full justify-center">Send Message →</button>
         </form>
-        <p class="text-xs text-ebony/40 mt-3 text-center">We typically respond within 1–2 business days.</p>
+        <p class="text-xs text-center mt-3" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">We typically respond within 1–2 business days.</p>
       </div>
-
-      <!-- Info -->
-      <div class="space-y-6">
-        <div class="bg-ivory rounded-2xl p-6 border border-ebony/6">
-          <h2 class="font-display font-bold text-xl text-ebony mb-4">Contact Information</h2>
-          <div class="space-y-4">
-            {[
-              { icon: '📧', label: 'Email', value: 'hello@harmoniumhalt.com' },
-              { icon: '🌐', label: 'Website', value: 'www.harmoniumhalt.com' },
-              { icon: '📍', label: 'Based in', value: 'India' },
-            ].map(c => (
-              <div class="flex gap-3 items-start">
-                <span class="text-lg">{c.icon}</span>
-                <div>
-                  <p class="text-xs text-ebony/40 font-medium">{c.label}</p>
-                  <p class="text-sm text-ebony font-medium">{c.value}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl p-5 sm:p-6 border" style="background:#faf6ef;border-color:rgba(28,16,8,.08)">
+          <h2 class="font-display font-bold text-lg mb-4" style="color:#1c1008">Contact Information</h2>
+          {[
+            {icon:'📧',label:'Email',val:'hello@harmoniumhalt.com'},
+            {icon:'🌐',label:'Website',val:'www.harmoniumhalt.com'},
+            {icon:'📍',label:'Based in',val:'India'},
+          ].map(c=>(
+            <div class="flex gap-3 mb-3">
+              <span class="text-lg flex-shrink-0">{c.icon}</span>
+              <div><p class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">{c.label}</p>
+                <p class="text-sm font-semibold" style="color:#1c1008;font-family:'Plus Jakarta Sans',sans-serif">{c.val}</p></div>
+            </div>
+          ))}
         </div>
-
-        <div class="bg-saffron-50 border border-saffron-200 rounded-2xl p-6">
-          <h3 class="font-display font-bold text-saffron-800 mb-3">💡 Common Questions</h3>
-          <div class="space-y-3 text-sm text-saffron-700">
-            {[
-              { q: 'Is Harmonium Halt really free?', a: 'Yes — all lessons, tools, and content are 100% free.' },
-              { q: 'Can I request a specific lesson topic?', a: 'Absolutely! Use the contact form with subject "Content Suggestion".' },
-              { q: 'I found a bug on the web harmonium.', a: 'Please report it via the contact form. We fix bugs quickly!' },
-            ].map(faq => (
-              <div>
-                <p class="font-semibold">{faq.q}</p>
-                <p class="text-saffron-600">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+        <div class="rounded-2xl p-5 sm:p-6" style="background:#fef9f0;border:1px solid rgba(212,146,10,.2)">
+          <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">💡 Common Questions</h3>
+          {[
+            {q:'Is Harmonium Halt really free?',a:'Yes — all lessons, tools, and content are 100% free.'},
+            {q:'Can I suggest a lesson topic?',a:'Yes! Use subject "Content Suggestion" in the form.'},
+            {q:'Found a bug in the harmonium?',a:'Report via the form. We fix bugs quickly!'},
+          ].map(f=>(
+            <div class="mb-3">
+              <p class="text-xs font-bold mb-0.5" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">{f.q}</p>
+              <p class="text-xs" style="color:rgba(146,64,14,.7);font-family:'Plus Jakarta Sans',sans-serif">{f.a}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   </div>
-
   <script>
-    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+    document.getElementById('cf')?.addEventListener('submit',e=>{
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      if (btn) {
-        btn.textContent = '✓ Message Sent!';
-        btn.classList.replace('bg-saffron-500', 'bg-green-500');
-        btn.classList.replace('hover:bg-saffron-400', 'hover:bg-green-400');
-        btn.disabled = true;
-      }
+      const b=e.target.querySelector('button[type="submit"]');
+      if(b){b.textContent='✓ Message Sent!';b.style.background='linear-gradient(135deg,#16a34a,#15803d)';b.disabled=true;}
     });
   </script>
 </Layout>

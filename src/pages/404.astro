@@ -2,15 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Page Not Found — Harmonium Halt" noindex={true}>
-  <div class="min-h-[60vh] flex items-center justify-center text-center px-4 py-20">
+  <div class="min-h-screen flex items-center justify-center text-center px-4" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
     <div>
-      <div class="text-6xl mb-6">🎹</div>
-      <h1 class="font-display font-black text-5xl text-ebony mb-4">404</h1>
-      <p class="text-xl text-ebony/60 mb-2">Looks like this note doesn't exist.</p>
-      <p class="text-ebony/40 mb-8">The page you're looking for has been moved or doesn't exist.</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all">← Go Home</a>
-        <a href="/lessons" class="bg-ebony/5 hover:bg-ebony/10 text-ebony font-semibold px-6 py-3 rounded-xl transition-all">View Lessons</a>
+      <div class="text-5xl sm:text-6xl mb-4">🎹</div>
+      <h1 class="section-title text-4xl sm:text-5xl mb-3" style="color:#faf6ef">404</h1>
+      <p class="text-base sm:text-xl mb-2" style="color:rgba(250,246,239,.6);font-family:'Plus Jakarta Sans',sans-serif">This note doesn't exist in our scale.</p>
+      <p class="text-sm mb-8" style="color:rgba(250,246,239,.35);font-family:'Plus Jakarta Sans',sans-serif">The page has been moved or never existed.</p>
+      <div class="flex flex-col xs:flex-row gap-3 justify-center">
+        <a href="/" class="btn-primary justify-center">← Go Home</a>
+        <a href="/lessons" class="btn-secondary justify-center">View Lessons</a>
       </div>
     </div>
   </div>

@@ -2,52 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-<Layout
-  title="Playing Bhajans on Harmonium | Harmonium Halt"
-  description="Playing Bhajans on Harmonium — Free harmonium lesson with interactive practice tool. Learn harmonium online at Harmonium Halt."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Playing Bhajans on Harmonium</span>
+<Layout title="Playing Bhajans on Harmonium | Harmonium Halt"
+  description="Learn to play popular devotional songs step by step with complete sargam notation. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Playing Bhajans on Harmonium</span>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full">Beginner</span>
-        <span class="text-xs text-ebony/40">⏱ 25 min</span>
-        <span class="text-xs text-ebony/40">Lesson 5 of 8</span>
+        <span class="badge badge-beginner capitalize">beginner</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 25 min · Lesson 7 of 8</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Playing Bhajans on Harmonium</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">A detailed lesson on Playing Bhajans on Harmonium for harmonium students. Practice concepts directly using our interactive web harmonium below.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Playing Bhajans on Harmonium</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Learn to play popular devotional songs step by step with complete sargam notation.</p>
     </div>
-    <div class="prose-harmonium">
-      <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-6">
-        <p class="text-sm text-saffron-800">🎹 This lesson includes an <strong>interactive harmonium</strong> below. Scroll down to practice immediately after reading each section.</p>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Bhajans use simple repetitive melodies — perfect for beginners</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Raghupati Raghav uses only 5 swaras — start here</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Learn sthayi (refrain) fully before adding antara (verse)</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Practice with steady bellows for smooth sustained sound</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Match tempo to a tabla track or metronome at 80 BPM</li>
+      </ul>
+    </div>
+    <div class="prose-hm">
+      <h2>Why Bhajans First</h2>
+      <p>Bhajans are the ideal first songs for harmonium students. They use simple melodic lines limited to 5 or 6 swaras have clear repetitive structures and carry familiar tunes that most Indian learners already know. Playing a complete bhajan successfully provides enormous motivation to continue and gives you an immediate sense of musical accomplishment.</p>
+
+      <h2>Raghupati Raghav — Complete Notes</h2>
+      <p>This beloved bhajan uses only Sa Re Ga Ma Pa. Sthayi: P P P D P M G R S — P P P D P M G R N S. Keys: G G G H G F D S A — G G G H G F D S J A. Practice just the first line 20 times until it feels automatic before adding the second line. The repetition in this bhajan makes it ideal for building muscle memory.</p>
+
+      <h2>Om Jai Jagdish Hare</h2>
+      <p>Opening phrase: S S S R G M M G R S. Keys: A A A S D F F D S A. Second phrase: G G G M D N N D M G. Keys: D D D F H J J H F D. Practice each phrase separately for 10 repetitions. Then connect them. The connection point between the two phrases is where most beginners lose momentum — slow down specifically at that transition.</p>
+
+      <h2>Vaishnav Jan To</h2>
+      <p>Opening: S G M P D N S-upper. Keys: A D F G H J K. This bhajan covers a wider melodic range than the previous two making it slightly more challenging. The melody rises to the upper Sa before descending. Practice the ascending portion and descending portion separately then connect them. This bhajan beautifully demonstrates the full octave range.</p>
+
+      <h2>Accompaniment Tips for Bhajans</h2>
+      <p>When accompanying a singer play one octave below the singing voice. Use the drone stop on Sa to provide a continuous tonic foundation. Keep your right-hand volume moderate — your role is support not dominance. Keep bellows pumping smooth and silent. The best harmonium accompaniment is one that blends so naturally the listener does not consciously notice it.</p>
+
+    </div>
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
-      <h2>Overview</h2>
-      <p>This lesson covers Playing Bhajans on Harmonium in depth. It is part of the Beginner curriculum at Harmonium Halt, designed to give you a clear, practical understanding with immediate application on the harmonium.</p>
-      <h2>Core Concepts</h2>
-      <p>Work through each concept carefully, then use the harmonium tool at the bottom of the page to practice what you've learned. Consistent application is the key to rapid progress.</p>
-      <h2>Practice Exercises</h2>
-      <p>Use the web harmonium below to practice the exercises in this lesson. Start slowly, then gradually increase your speed as the patterns become comfortable.</p>
     </div>
-    <div class="mt-8 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
-      </div>
-    </div>
-    <div class="flex justify-between mt-8">
-      <a href="/lessons" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         All Lessons
       </a>
-      <a href="/practice" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all text-sm">
-        Full Practice Tool →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

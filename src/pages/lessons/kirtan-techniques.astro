@@ -2,52 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-<Layout
-  title="Harmonium for Kirtan and Bhajan | Harmonium Halt"
-  description="Harmonium for Kirtan and Bhajan — Free harmonium lesson with interactive practice tool. Learn harmonium online at Harmonium Halt."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Harmonium for Kirtan and Bhajan</span>
+<Layout title="Harmonium for Kirtan and Bhajan | Harmonium Halt"
+  description="Advanced techniques for leading kirtan — drones, call-response, and energy arc building. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Harmonium for Kirtan and Bhajan</span>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-burgundy-100 text-burgundy-700 px-3 py-1 rounded-full">Advanced</span>
-        <span class="text-xs text-ebony/40">⏱ 40 min</span>
-        <span class="text-xs text-ebony/40">Advanced</span>
+        <span class="badge badge-advanced capitalize">advanced</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 40 min · Advanced</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Harmonium for Kirtan and Bhajan</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">A detailed lesson on Harmonium for Kirtan and Bhajan for harmonium students. Practice concepts directly using our interactive web harmonium below.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Harmonium for Kirtan and Bhajan</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Advanced techniques for leading kirtan — drones, call-response, and energy arc building.</p>
     </div>
-    <div class="prose-harmonium">
-      <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-6">
-        <p class="text-sm text-saffron-800">🎹 This lesson includes an <strong>interactive harmonium</strong> below. Scroll down to practice immediately after reading each section.</p>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Drone stops give continuous Sa foundation</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Play melody one octave below the singing voice</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Build energy gradually — slow to fast arc</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Call-response between harmonium and congregation</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Smooth transitions between verses maintain energy</li>
+      </ul>
+    </div>
+    <div class="prose-hm">
+      <h2>The Role in Kirtan</h2>
+      <p>In kirtan the harmonium is the musical heart of the gathering. It provides tonal foundation leads the melody suggests tempo changes and builds collective energy. A skilled kirtan harmonium player can lift an entire congregation into joyful devotional states through musical leadership. This requires more than technical skill — it requires musical sensitivity and awareness of group energy.</p>
+
+      <h2>Setting the Drone Foundation</h2>
+      <p>Pull out the drone stops to set the Sa drone giving a continuous tonic foundation. Choose a Sa position comfortable for the group's vocal range — typically where most voices can reach both lower Sa and upper Ga and Ma comfortably. The drone should be audible but not overpowering — a supporting foundation not the main sound.</p>
+
+      <h2>Call and Response Technique</h2>
+      <p>Traditional kirtan uses call-response structure: leader sings a phrase group responds. Your harmonium bridges these calls and responses. When the leader sings play softer matching their melody exactly. When the group responds play more prominently guiding their pitch. Practice transitioning between these two roles — supporting and leading — fluidly.</p>
+
+      <h2>Building the Energy Arc</h2>
+      <p>A kirtan typically progresses through three energy phases. Opening (slow meditative): play softly in slow tempo simple single-line melody. Building (growing energy): gradually increase tempo add octave leaps emphasize rhythmic strokes. Peak (ecstatic): fast tempo full volume complete octave range high energy. Then slowly return to peaceful closing. This arc takes 15 to 30 minutes and is the art of kirtan leading.</p>
+
+      <h2>Common Kirtan Mistakes</h2>
+      <p>Playing too fast too soon destroys the meditative opening. Playing at the same energy level throughout prevents the arc. Forgetting to pump bellows smoothly creates uneven tone. Playing too many notes overcomplicates what should be singable melody. Losing the beat during verse transitions breaks the group's momentum. Each of these mistakes can be avoided by developing awareness and musical sensitivity.</p>
+
+    </div>
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
-      <h2>Overview</h2>
-      <p>This lesson covers Harmonium for Kirtan and Bhajan in depth. It is part of the Advanced curriculum at Harmonium Halt, designed to give you a clear, practical understanding with immediate application on the harmonium.</p>
-      <h2>Core Concepts</h2>
-      <p>Work through each concept carefully, then use the harmonium tool at the bottom of the page to practice what you've learned. Consistent application is the key to rapid progress.</p>
-      <h2>Practice Exercises</h2>
-      <p>Use the web harmonium below to practice the exercises in this lesson. Start slowly, then gradually increase your speed as the patterns become comfortable.</p>
     </div>
-    <div class="mt-8 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
-      </div>
-    </div>
-    <div class="flex justify-between mt-8">
-      <a href="/lessons" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         All Lessons
       </a>
-      <a href="/practice" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all text-sm">
-        Full Practice Tool →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

@@ -3,11 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://www.harmoniumhalt.com',
-  integrations: [
-    tailwind(),
-  ],
+  integrations: [tailwind()],
   output: 'static',
-  build: {
-    assets: '_assets',
-  },
+  build: { assets: '_assets' },
 });

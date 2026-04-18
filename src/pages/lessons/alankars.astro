@@ -2,146 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-
-<Layout
-  title="Alankars for Harmonium — 10 Essential Practice Patterns | Harmonium Halt"
-  description="Learn 10 essential alankars for harmonium practice. Daily patterns to build speed, accuracy, and muscle memory. Includes keyboard shortcuts and practice tips."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Alankars</span>
+<Layout title="Alankars — 10 Essential Patterns | Harmonium Halt"
+  description="Master the 10 essential daily practice patterns that build finger speed, independence, and coordination. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Alankars — 10 Essential Patterns</span>
     </div>
   </div>
-
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-saffron-100 text-saffron-700 px-3 py-1 rounded-full">Intermediate</span>
-        <span class="text-xs text-ebony/40">⏱ 30 min</span>
+        <span class="badge badge-intermediate capitalize">intermediate</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 30 min · Intermediate</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Alankars — 10 Essential Practice Patterns</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">Alankars are structured practice patterns that build finger speed, independence, and coordination. These are the core of daily <em>riyaaz</em> (practice) for every harmonium student.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Alankars — 10 Essential Patterns</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Master the 10 essential daily practice patterns that build finger speed, independence, and coordination.</p>
     </div>
-
-    <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-8">
-      <h3 class="font-bold text-saffron-800 mb-2">What is an Alankar?</h3>
-      <p class="text-sm text-saffron-700">The word <em>alankar</em> comes from Sanskrit meaning "ornament" or "decoration." In practice, alankars are systematic sequences that move through the saptaka (octave) in a fixed pattern. Regular alankar practice is the single most effective thing you can do to improve your harmonium playing.</p>
-    </div>
-
-    <div class="prose-harmonium">
-      <h2>How to Practice Alankars</h2>
-      <ul>
-        <li>Start very slowly — slower than you think you need to</li>
-        <li>Use a metronome or tabla track at 60 BPM initially</li>
-        <li>Each note should be equal in duration and volume</li>
-        <li>Increase speed only when the pattern feels completely natural</li>
-        <li>Practice each alankar ascending and descending</li>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Alankar means ornament — systematic scale patterns</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Practice slower than comfortable before adding speed</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Each note must be equal in duration and volume</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Sing swara names while playing for maximum benefit</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>20 minutes of alankars daily beats 2 hours on weekends</li>
       </ul>
     </div>
+    <div class="prose-hm">
+      <h2>What Are Alankars</h2>
+      <p>Alankars (Sanskrit for ornament) are systematic repeating patterns that move through the notes of a scale in a fixed sequence. They are the core of daily riyaaz in Indian classical music. Unlike Western scales alankars explore many different combinations of notes — preparing your fingers for all the melodic movements you will encounter in ragas and compositions.</p>
 
-    <!-- The 10 Alankars -->
-    <div class="mt-8 space-y-5">
-      <h2 class="font-display font-bold text-2xl text-ebony">The 10 Alankars</h2>
-      {[
-        {
-          num: 1, name: 'Ascending Scale',
-          sargam: 'S R G M P D N Ṡ',
-          keys: 'A S D F G H J K',
-          desc: 'The foundation. Play each swara clearly and evenly. This trains even finger pressure and basic coordination.',
-        },
-        {
-          num: 2, name: 'Descending Scale',
-          sargam: 'Ṡ N D P M G R S',
-          keys: 'K J H G F D S A',
-          desc: 'The reverse of Alankar 1. Many beginners find descending harder — focus extra attention here.',
-        },
-        {
-          num: 3, name: 'Pairs Ascending',
-          sargam: 'SR RG GM MP PD DN NṠ',
-          keys: 'AS SD DF FG GH HJ JK',
-          desc: 'Two consecutive swaras played as a unit. Builds smooth finger transitions.',
-        },
-        {
-          num: 4, name: 'Pairs Descending',
-          sargam: 'ṠN ND DP PM MG GR RS',
-          keys: 'KJ JH HG GF FD DS SA',
-          desc: 'Descending version of Alankar 3.',
-        },
-        {
-          num: 5, name: 'Triplets Ascending',
-          sargam: 'SRG RGM GMP MPD PDN DNṠ',
-          keys: 'ASD SDF DFG FGH GHJ HJK',
-          desc: 'Three-note groups. This is where speed and coordination really begin to develop.',
-        },
-        {
-          num: 6, name: 'Triplets Descending',
-          sargam: 'ṠND NDP DPM PMG MGR GRS',
-          keys: 'KJH JHG HGF GFD FDS DSA',
-          desc: 'Descending triplets. Practice this at the same tempo as Alankar 5.',
-        },
-        {
-          num: 7, name: 'Tetrachords',
-          sargam: 'SRGM RGMP GMPD MPDM PDNṠr',
-          keys: 'ASDF SDFG DFGH FGHJ GHJK',
-          desc: 'Four-note groups. One of the most important alankars for building true playing speed.',
-        },
-        {
-          num: 8, name: 'Skip Pattern (Sa-Ga)',
-          sargam: 'S G R M G P M D P N D Ṡ',
-          keys: 'A D S F D G F H G J H K',
-          desc: 'Skipping every other note — trains finger independence and expands keyboard familiarity.',
-        },
-        {
-          num: 9, name: 'Turn Pattern',
-          sargam: 'SRS RGR GMG MPM PDPDDNṠNṠ',
-          keys: 'ASA SDS DFD FGF GHG HJH JKJ',
-          desc: 'Moving forward and backward like a turn/trill. Develops fine motor control.',
-        },
-        {
-          num: 10, name: 'Full Octave Jump',
-          sargam: 'S Ṡ R Ṙ G Ġ M Ṁ P Ṗ D Ḋ N Ṅ',
-          keys: 'A K  S L  D ;',
-          desc: 'Playing each swara and its upper octave equivalent. Develops large position jumps and octave awareness.',
-        },
-      ].map(a => (
-        <div class="bg-white border border-ebony/8 rounded-xl overflow-hidden shadow-sm">
-          <div class="flex items-center gap-4 px-5 py-3 bg-gradient-to-r from-saffron-50 to-ivory border-b border-ebony/6">
-            <div class="w-8 h-8 bg-saffron-500 text-white rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">{a.num}</div>
-            <h3 class="font-display font-bold text-ebony">{a.name}</h3>
-          </div>
-          <div class="p-5">
-            <div class="mb-3">
-              <p class="text-xs text-ebony/40 uppercase tracking-wider mb-1">Sargam Pattern</p>
-              <p class="font-mono text-saffron-700 font-bold text-lg tracking-wider">{a.sargam}</p>
-            </div>
-            <div class="mb-3">
-              <p class="text-xs text-ebony/40 uppercase tracking-wider mb-1">Keyboard Keys</p>
-              <p class="font-mono text-ebony/60 bg-ebony/5 px-3 py-1 rounded-lg text-sm inline-block">{a.keys}</p>
-            </div>
-            <p class="text-sm text-ebony/70 leading-relaxed">{a.desc}</p>
-          </div>
-        </div>
-      ))}
+      <h2>The 10 Essential Alankars</h2>
+      <p>1. Ascending scale: S R G M P D N S. 2. Descending: S N D P M G R S. 3. Pairs ascending: SR RG GM MP PD DN NS. 4. Pairs descending: SN ND DP PM MG GR RS. 5. Triplets ascending: SRG RGM GMP MPD PDN DNS. 6. Triplets descending. 7. Tetrachords: SRGM RGMP GMPD. 8. Skip pattern: S G R M G P M D. 9. Turn pattern: SRS RGR GMG. 10. Octave jumps: S upper-S R upper-R G upper-G.</p>
+
+      <h2>How to Practice Effectively</h2>
+      <p>Set a metronome to 60 BPM. Play each alankar at this tempo until it feels completely effortless — not just comfortable but automatic. Only then increase to 65 BPM. This patience with slow careful practice is what separates students who progress quickly from those who plateau early. The goal is precision first then speed.</p>
+
+      <h2>Building Your Riyaaz Session</h2>
+      <p>A focused 20-minute alankar session: Minutes 0 to 5 play ascending and descending scales as warm-up. Minutes 5 to 15 focus on 2 or 3 specific alankars working on your weakest patterns. Minutes 15 to 20 apply one alankar pattern within the framework of a raga you are learning. This bridges technical practice and musical application.</p>
+
+      <h2>Signs of Real Progress</h2>
+      <p>You are genuinely progressing when you can play without looking at your hands, when your playing speed increases measurably week over week, when you can maintain perfectly even dynamics at higher tempos, and when you start naturally hearing alankar patterns embedded within songs and ragas. Progress is slow but cumulative — trust the process.</p>
+
     </div>
-
-    <!-- Practice Harmonium -->
-    <div class="mt-10 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Alankars Now</h2>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
     </div>
-
-    <div class="flex flex-col sm:flex-row gap-4 justify-between">
-      <a href="/lessons/finger-placement" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Previous: Finger Placement
+        All Lessons
       </a>
-      <a href="/lessons/ragas-introduction" class="flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all">
-        Next: Ragas Intro →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

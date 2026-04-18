@@ -1,68 +1,89 @@
 ---
-const currentYear = new Date().getFullYear();
+const year = new Date().getFullYear();
 ---
 
-<footer class="bg-ebony text-ivory/70">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+<footer style="background:#1c1008;color:rgba(250,246,239,.65)" class="safe-bottom">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-6 sm:pb-8">
+
+    <!-- Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10">
+
       <!-- Brand -->
-      <div class="lg:col-span-1">
+      <div class="col-span-2 sm:col-span-2 lg:col-span-1">
         <a href="/" class="flex items-center gap-2 mb-4">
-          <div class="w-9 h-9 bg-gradient-to-br from-saffron-400 to-burgundy-700 rounded-lg flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="14" width="2" height="6" rx="1" fill="white"/><rect x="5" y="12" width="2" height="8" rx="1" fill="white"/><rect x="8" y="14" width="2" height="6" rx="1" fill="white"/><rect x="11" y="11" width="2" height="9" rx="1" fill="white"/><rect x="14" y="14" width="2" height="6" rx="1" fill="white"/><rect x="17" y="12" width="2" height="8" rx="1" fill="white"/><rect x="20" y="14" width="2" height="6" rx="1" fill="white"/></svg>
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+               style="background:linear-gradient(135deg,#c8360a,#7a0000)">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+              <rect x="2"  y="14" width="2.2" height="7" rx="1.1" fill="white"/>
+              <rect x="5.2" y="11" width="2.2" height="10" rx="1.1" fill="white"/>
+              <rect x="8.4" y="14" width="2.2" height="7" rx="1.1" fill="white"/>
+              <rect x="11.6" y="9" width="2.2" height="12" rx="1.1" fill="white"/>
+              <rect x="14.8" y="14" width="2.2" height="7" rx="1.1" fill="white"/>
+              <rect x="18"  y="11" width="2.2" height="10" rx="1.1" fill="white"/>
+            </svg>
           </div>
-          <span class="font-display font-bold text-gold-400 text-lg">Harmonium Halt</span>
+          <span class="font-display font-bold text-lg" style="color:#f0aa0e">Harmonium Halt</span>
         </a>
-        <p class="text-sm leading-relaxed mb-4">
-          India's premier online harmonium learning platform. Play, learn, and practice harmonium from the comfort of your home.
+        <p class="text-sm leading-relaxed mb-3" style="font-family:'Plus Jakarta Sans',sans-serif">
+          India's premier free online harmonium learning platform. Play, learn, and practice anytime.
         </p>
-        <p class="text-xs font-medium text-saffron-400 italic font-display">
+        <p class="text-xs italic font-display" style="color:#d4920a">
           "Play Online Web Harmonium, Learn Easily, Practice Daily"
         </p>
       </div>
 
       <!-- Learn -->
       <div>
-        <h3 class="font-display font-semibold text-ivory mb-4 text-sm uppercase tracking-wider">Learn</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/lessons" class="hover:text-gold-400 transition-colors">All Lessons</a></li>
-          <li><a href="/lessons/beginner" class="hover:text-gold-400 transition-colors">Beginner Course</a></li>
-          <li><a href="/lessons/intermediate" class="hover:text-gold-400 transition-colors">Intermediate Course</a></li>
-          <li><a href="/lessons/advanced" class="hover:text-gold-400 transition-colors">Advanced Course</a></li>
-          <li><a href="/notes" class="hover:text-gold-400 transition-colors">Notes & Downloads</a></li>
+        <h3 class="text-xs font-bold uppercase tracking-wider mb-4" style="color:rgba(250,246,239,.9);font-family:'Plus Jakarta Sans',sans-serif">Learn</h3>
+        <ul class="space-y-2.5 text-sm" style="font-family:'Plus Jakarta Sans',sans-serif">
+          {[
+            ['/lessons','All Lessons'],
+            ['/lessons/introduction-to-harmonium','Beginner Start'],
+            ['/lessons/alankars','Alankars'],
+            ['/lessons/ragas-introduction','Ragas'],
+            ['/notes','Notes & Downloads'],
+          ].map(([h,l]) => (
+            <li><a href={h} class="hover:text-yellow-400 transition-colors" style="color:rgba(250,246,239,.6)">{l}</a></li>
+          ))}
         </ul>
       </div>
 
       <!-- Practice -->
       <div>
-        <h3 class="font-display font-semibold text-ivory mb-4 text-sm uppercase tracking-wider">Practice</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/practice" class="hover:text-gold-400 transition-colors">Web Harmonium</a></li>
-          <li><a href="/practice#scales" class="hover:text-gold-400 transition-colors">Scales & Alankars</a></li>
-          <li><a href="/practice#ragas" class="hover:text-gold-400 transition-colors">Raga Practice</a></li>
-          <li><a href="/blog" class="hover:text-gold-400 transition-colors">Blog & Tips</a></li>
-          <li><a href="/about" class="hover:text-gold-400 transition-colors">About Us</a></li>
+        <h3 class="text-xs font-bold uppercase tracking-wider mb-4" style="color:rgba(250,246,239,.9);font-family:'Plus Jakarta Sans',sans-serif">Practice</h3>
+        <ul class="space-y-2.5 text-sm" style="font-family:'Plus Jakarta Sans',sans-serif">
+          {[
+            ['/practice','Web Harmonium'],
+            ['/blog','Blog'],
+            ['/about','About'],
+            ['/contact','Contact'],
+          ].map(([h,l]) => (
+            <li><a href={h} class="hover:text-yellow-400 transition-colors" style="color:rgba(250,246,239,.6)">{l}</a></li>
+          ))}
         </ul>
       </div>
 
       <!-- Legal -->
       <div>
-        <h3 class="font-display font-semibold text-ivory mb-4 text-sm uppercase tracking-wider">Site Info</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/about" class="hover:text-gold-400 transition-colors">About</a></li>
-          <li><a href="/contact" class="hover:text-gold-400 transition-colors">Contact</a></li>
-          <li><a href="/privacy-policy" class="hover:text-gold-400 transition-colors">Privacy Policy</a></li>
-          <li><a href="/terms" class="hover:text-gold-400 transition-colors">Terms of Use</a></li>
-          <li><a href="/disclaimer" class="hover:text-gold-400 transition-colors">Disclaimer</a></li>
-          <li><a href="/sitemap.xml" class="hover:text-gold-400 transition-colors">Sitemap</a></li>
+        <h3 class="text-xs font-bold uppercase tracking-wider mb-4" style="color:rgba(250,246,239,.9);font-family:'Plus Jakarta Sans',sans-serif">Legal</h3>
+        <ul class="space-y-2.5 text-sm" style="font-family:'Plus Jakarta Sans',sans-serif">
+          {[
+            ['/privacy-policy','Privacy Policy'],
+            ['/terms','Terms of Use'],
+            ['/disclaimer','Disclaimer'],
+            ['/sitemap.xml','Sitemap'],
+          ].map(([h,l]) => (
+            <li><a href={h} class="hover:text-yellow-400 transition-colors" style="color:rgba(250,246,239,.6)">{l}</a></li>
+          ))}
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-      <p>© {currentYear} Harmonium Halt. All rights reserved.</p>
-      <p class="text-ivory/40">Made with ♥ for music learners across India</p>
+    <!-- Bottom bar -->
+    <div class="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs"
+         style="border-color:rgba(255,255,255,.08);font-family:'Plus Jakarta Sans',sans-serif">
+      <p>© {year} Harmonium Halt. All rights reserved.</p>
+      <p style="color:rgba(250,246,239,.35)">Made with ♥ for music learners across India</p>
     </div>
   </div>
 </footer>

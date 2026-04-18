@@ -2,142 +2,123 @@
 import Layout from '../../layouts/Layout.astro';
 import LessonCard from '../../components/LessonCard.astro';
 
-const beginnerLessons = [
-  { title: 'Introduction to Harmonium', description: 'History of harmonium, parts explained, and how it produces sound. Perfect starting point.', href: '/lessons/introduction-to-harmonium', level: 'beginner', duration: '10 min', icon: '🎹' },
-  { title: 'Understanding the Keyboard', description: 'White keys, black keys, octaves, and how to navigate the harmonium keyboard confidently.', href: '/lessons/understanding-the-keyboard', level: 'beginner', duration: '15 min', icon: '⌨️' },
-  { title: 'Sa Re Ga Ma — Seven Swaras', description: 'The foundation of Indian classical music. Learn all 7 swaras with exercises on harmonium.', href: '/lessons/sa-re-ga-ma', level: 'beginner', duration: '20 min', icon: '🎵' },
-  { title: 'Finger Placement & Posture', description: 'Proper posture and finger technique to avoid strain and build playing speed correctly.', href: '/lessons/finger-placement', level: 'beginner', duration: '15 min', icon: '👐' },
-  { title: 'Komal and Tivra Swaras', description: 'Learn the flat (komal) and sharp (tivra) notes — the black keys of harmonium.', href: '/lessons/komal-tivra-swaras', level: 'beginner', duration: '20 min', icon: '🎼' },
-  { title: 'Playing Bhajans on Harmonium', description: 'Step-by-step lessons for popular devotional songs with sargam notation.', href: '/lessons/bhajans', level: 'beginner', duration: '25 min', icon: '🙏' },
-  { title: 'Sargam Notation Reading', description: 'Learn to read and write sargam notation — the sheet music of Indian classical music.', href: '/lessons/sargam-notation', level: 'beginner', duration: '20 min', icon: '📝' },
-  { title: 'Major Scales Practice', description: 'Practice all 12 major scales ascending and descending to build harmonium fluency.', href: '/lessons/major-scales', level: 'beginner', duration: '20 min', icon: '📈' },
+const beginner = [
+  {title:'Introduction to Harmonium',description:'Parts, history, and your very first sounds.',href:'/lessons/introduction-to-harmonium',level:'beginner',duration:'10 min',icon:'🎹'},
+  {title:'Understanding the Keyboard',description:'White keys, black keys, octaves explained.',href:'/lessons/understanding-the-keyboard',level:'beginner',duration:'15 min',icon:'⌨️'},
+  {title:'Sa Re Ga Ma — Seven Swaras',description:'India\'s musical alphabet from Sa to Ni.',href:'/lessons/sa-re-ga-ma',level:'beginner',duration:'20 min',icon:'🎵'},
+  {title:'Finger Placement & Posture',description:'Correct technique to avoid strain and build speed.',href:'/lessons/finger-placement',level:'beginner',duration:'15 min',icon:'👐'},
+  {title:'Komal and Tivra Swaras',description:'Black keys explained — flat and sharp notes.',href:'/lessons/komal-tivra-swaras',level:'beginner',duration:'20 min',icon:'🎼'},
+  {title:'Sargam Notation Reading',description:'Learn to read and write India\'s sheet music.',href:'/lessons/sargam-notation',level:'beginner',duration:'20 min',icon:'📝'},
+  {title:'Playing Bhajans',description:'Play popular devotional songs with notations.',href:'/lessons/bhajans',level:'beginner',duration:'25 min',icon:'🙏'},
+  {title:'Major Scales Practice',description:'All 12 major scales ascending and descending.',href:'/lessons/major-scales',level:'beginner',duration:'20 min',icon:'📈'},
 ];
-
-const intermediateLessons = [
-  { title: 'Alankars — 10 Essential Patterns', description: 'Master 10 alankars that every harmonium player must practice daily for speed and accuracy.', href: '/lessons/alankars', level: 'intermediate', duration: '30 min', icon: '🔄' },
-  { title: 'Introduction to Ragas', description: 'What is a raga? Understanding aroha, avaroha, vadi, samvadi, and time theory.', href: '/lessons/ragas-introduction', level: 'intermediate', duration: '25 min', icon: '🌙' },
-  { title: 'Raga Yaman', description: 'Learn Raga Yaman completely — the most popular evening raga with all its characteristic phrases.', href: '/lessons/raga-yaman', level: 'intermediate', duration: '40 min', icon: '⭐' },
-  { title: 'Raga Bhairavi', description: 'The most beloved morning raga. Master Bhairavi\'s unique komal swaras and emotional depth.', href: '/lessons/raga-bhairavi', level: 'intermediate', duration: '40 min', icon: '🌅' },
-  { title: 'Harmonium Chords', description: 'Playing chords on harmonium for accompaniment. Major, minor, and seventh chords.', href: '/lessons/harmonium-chords', level: 'intermediate', duration: '30 min', icon: '🎸' },
-  { title: 'Taal and Rhythm', description: 'Understanding taal — the rhythmic framework. Teentaal, Ektaal, and Keherwa explained.', href: '/lessons/taal-rhythm', level: 'intermediate', duration: '35 min', icon: '🥁' },
+const intermediate = [
+  {title:'Alankars — 10 Essential Patterns',description:'Daily practice patterns for speed and coordination.',href:'/lessons/alankars',level:'intermediate',duration:'30 min',icon:'🔄'},
+  {title:'Introduction to Ragas',description:'Aroha, avaroha, vadi, samvadi, and time theory.',href:'/lessons/ragas-introduction',level:'intermediate',duration:'25 min',icon:'🌙'},
+  {title:'Raga Yaman',description:'Learn the most popular evening raga completely.',href:'/lessons/raga-yaman',level:'intermediate',duration:'40 min',icon:'⭐'},
+  {title:'Raga Bhairavi',description:'The most beloved morning raga, all komal swaras.',href:'/lessons/raga-bhairavi',level:'intermediate',duration:'40 min',icon:'🌅'},
+  {title:'Harmonium Chords',description:'Major, minor, and seventh chords for accompaniment.',href:'/lessons/harmonium-chords',level:'intermediate',duration:'30 min',icon:'🎸'},
+  {title:'Taal and Rhythm',description:'Teentaal, Ektaal, Keherwa — rhythmic framework.',href:'/lessons/taal-rhythm',level:'intermediate',duration:'35 min',icon:'🥁'},
 ];
-
-const advancedLessons = [
-  { title: 'Classical Improvisation', description: 'Learn to improvise within the framework of a raga using gamak, meend, and andolan ornaments.', href: '/lessons/classical-improvisation', level: 'advanced', duration: '45 min', icon: '🌟' },
-  { title: 'Raga Bhairav — Deep Study', description: 'The majestic morning raga. Detailed study with popular compositions and bandishes.', href: '/lessons/raga-bhairav', level: 'advanced', duration: '50 min', icon: '🏔️' },
-  { title: 'Bandish and Composition', description: 'Learn to play classical compositions (bandish) in Drut and Vilambit tempos.', href: '/lessons/bandish-composition', level: 'advanced', duration: '45 min', icon: '🎭' },
-  { title: 'Harmonium for Kirtan & Bhajan', description: 'Advanced techniques for leading kirtan — drone playing, call-response patterns, building energy.', href: '/lessons/kirtan-techniques', level: 'advanced', duration: '40 min', icon: '🕉️' },
+const advanced = [
+  {title:'Classical Improvisation',description:'Gamak, meend, andolan — raga ornaments.',href:'/lessons/classical-improvisation',level:'advanced',duration:'45 min',icon:'🌟'},
+  {title:'Raga Bhairav — Deep Study',description:'The majestic morning raga with compositions.',href:'/lessons/raga-bhairav',level:'advanced',duration:'50 min',icon:'🏔️'},
+  {title:'Bandish and Composition',description:'Classical compositions in Drut and Vilambit.',href:'/lessons/bandish-composition',level:'advanced',duration:'45 min',icon:'🎭'},
+  {title:'Harmonium for Kirtan',description:'Advanced techniques for leading kirtan sessions.',href:'/lessons/kirtan-techniques',level:'advanced',duration:'40 min',icon:'🕉️'},
 ];
-
-const practiceLessons = [
-  { title: 'Daily Riyaaz Routine', description: '30-minute daily practice routine for consistent progress. Includes warm-up, alankars, and composition time.', href: '/lessons/daily-riyaaz', level: 'practice', duration: '30 min', icon: '⏰' },
-  { title: 'Speed Building Exercises', description: 'Targeted exercises to increase your playing speed without sacrificing accuracy.', href: '/lessons/speed-exercises', level: 'practice', duration: '20 min', icon: '⚡' },
-  { title: 'Ear Training for Swaras', description: 'Develop your ear to identify swaras by sound. Essential for advanced improvisation.', href: '/lessons/ear-training', level: 'practice', duration: '25 min', icon: '👂' },
+const practice = [
+  {title:'Daily Riyaaz Routine',description:'30-minute structured daily practice plan.',href:'/lessons/daily-riyaaz',level:'practice',duration:'30 min',icon:'⏰'},
+  {title:'Speed Building Exercises',description:'Targeted exercises to increase playing speed.',href:'/lessons/speed-exercises',level:'practice',duration:'20 min',icon:'⚡'},
+  {title:'Ear Training for Swaras',description:'Identify swaras by sound — essential for ragas.',href:'/lessons/ear-training',level:'practice',duration:'25 min',icon:'👂'},
 ];
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "Harmonium Learning Course — Harmonium Halt",
-  "description": "Complete online harmonium course from beginner to advanced. Learn Sa Re Ga Ma, ragas, bhajans, and classical music.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Harmonium Halt",
-    "url": "https://www.harmoniumhalt.com"
-  },
-  "hasCourseInstance": [
-    { "@type": "CourseInstance", "courseMode": "online", "name": "Beginner Harmonium Course" },
-    { "@type": "CourseInstance", "courseMode": "online", "name": "Intermediate Harmonium Course" },
-    { "@type": "CourseInstance", "courseMode": "online", "name": "Advanced Harmonium Course" },
-  ]
-};
 ---
 
-<Layout
-  title="Harmonium Lessons — Learn from Beginner to Advanced | Harmonium Halt"
-  description="Free harmonium lessons for all levels. Beginner to advanced structured curriculum covering Sa Re Ga Ma, alankars, ragas, bhajans, and classical techniques."
-  schema={schema}
->
+<Layout title="Harmonium Lessons — Beginner to Advanced | Harmonium Halt"
+  description="Free harmonium lessons for all levels. Beginner to advanced curriculum covering Sa Re Ga Ma, alankars, ragas, bhajans, and classical techniques.">
+
   <!-- Breadcrumb -->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <nav class="text-xs text-ebony/40">
-        <a href="/" class="hover:text-saffron-600">Home</a>
-        <span class="mx-2">›</span>
-        <span class="text-ebony/70">Lessons</span>
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
+      <nav class="breadcrumb">
+        <a href="/">Home</a><span class="mx-1.5">›</span><span>Lessons</span>
       </nav>
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
     <!-- Header -->
-    <div class="text-center mb-12">
-      <h1 class="font-display font-black text-4xl md:text-5xl text-ebony mb-4">
-        Harmonium Lessons
-      </h1>
-      <p class="text-xl text-ebony/60 max-w-2xl mx-auto">
-        Structured learning path from absolute beginner to advanced performer. All lessons are free.
+    <div class="text-center mb-8 sm:mb-12">
+      <h1 class="section-title text-3xl sm:text-4xl lg:text-5xl mb-3" style="color:#1c1008">Harmonium Lessons</h1>
+      <p class="text-sm sm:text-lg max-w-xl mx-auto" style="color:rgba(28,16,8,.55);font-family:'Plus Jakarta Sans',sans-serif">
+        Complete learning path from absolute beginner to advanced performer. All lessons are free.
       </p>
     </div>
 
-    <!-- Level Navigation -->
-    <div class="flex flex-wrap gap-3 justify-center mb-12">
+    <!-- Level jump links -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10">
       {[
-        { href: '#beginner', label: '🟢 Beginner', color: 'border-green-400 text-green-700 bg-green-50' },
-        { href: '#intermediate', label: '🟠 Intermediate', color: 'border-saffron-400 text-saffron-700 bg-saffron-50' },
-        { href: '#advanced', label: '🔴 Advanced', color: 'border-burgundy-400 text-burgundy-700 bg-burgundy-50' },
-        { href: '#practice', label: '⭐ Practice', color: 'border-gold-400 text-gold-700 bg-gold-50' },
-      ].map(l => (
-        <a href={l.href} class={`px-4 py-2 rounded-full border-2 font-semibold text-sm transition-all hover:shadow-md ${l.color}`}>{l.label}</a>
+        {href:'#beginner',     label:'🟢 Beginner',      cls:'border-green-300  text-green-800  bg-green-50'},
+        {href:'#intermediate', label:'🟡 Intermediate',   cls:'border-yellow-300 text-yellow-800 bg-yellow-50'},
+        {href:'#advanced',     label:'🔴 Advanced',       cls:'border-red-300    text-red-800    bg-red-50'},
+        {href:'#practice',     label:'⭐ Practice',       cls:'border-amber-300  text-amber-800  bg-amber-50'},
+      ].map(l=>(
+        <a href={l.href} class={`px-3 sm:px-4 py-1.5 rounded-full border-2 font-bold text-xs sm:text-sm transition-all hover:shadow-md ${l.cls}`}
+           style="font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">{l.label}</a>
       ))}
     </div>
 
     <!-- Beginner -->
-    <section id="beginner" class="mb-14">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-        <h2 class="font-display font-bold text-2xl text-ebony">Beginner Lessons</h2>
-        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">{beginnerLessons.length} lessons</span>
+    <section id="beginner" class="mb-12 sm:mb-14">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-3 h-3 rounded-full bg-green-500 flex-shrink-0"></div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl" style="color:#1c1008">Beginner Lessons</h2>
+        <span class="badge badge-beginner">{beginner.length} lessons</span>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {beginnerLessons.map(l => <LessonCard {...l} level="beginner" />)}
+      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {beginner.map(l=><LessonCard {...l} level="beginner"/>)}
       </div>
     </section>
 
     <!-- Intermediate -->
-    <section id="intermediate" class="mb-14">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-3 h-3 bg-saffron-500 rounded-full"></div>
-        <h2 class="font-display font-bold text-2xl text-ebony">Intermediate Lessons</h2>
-        <span class="text-xs bg-saffron-100 text-saffron-700 px-2 py-1 rounded-full font-semibold">{intermediateLessons.length} lessons</span>
+    <section id="intermediate" class="mb-12 sm:mb-14">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-3 h-3 rounded-full bg-yellow-500 flex-shrink-0"></div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl" style="color:#1c1008">Intermediate Lessons</h2>
+        <span class="badge badge-intermediate">{intermediate.length} lessons</span>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {intermediateLessons.map(l => <LessonCard {...l} level="intermediate" />)}
+      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        {intermediate.map(l=><LessonCard {...l} level="intermediate"/>)}
       </div>
     </section>
 
     <!-- Advanced -->
-    <section id="advanced" class="mb-14">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-3 h-3 bg-burgundy-600 rounded-full"></div>
-        <h2 class="font-display font-bold text-2xl text-ebony">Advanced Lessons</h2>
-        <span class="text-xs bg-burgundy-100 text-burgundy-700 px-2 py-1 rounded-full font-semibold">{advancedLessons.length} lessons</span>
+    <section id="advanced" class="mb-12 sm:mb-14">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-3 h-3 rounded-full bg-red-500 flex-shrink-0"></div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl" style="color:#1c1008">Advanced Lessons</h2>
+        <span class="badge badge-advanced">{advanced.length} lessons</span>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {advancedLessons.map(l => <LessonCard {...l} level="advanced" />)}
+      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {advanced.map(l=><LessonCard {...l} level="advanced"/>)}
       </div>
     </section>
 
     <!-- Practice -->
-    <section id="practice" class="mb-14">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-3 h-3 bg-gold-500 rounded-full"></div>
-        <h2 class="font-display font-bold text-2xl text-ebony">Practice Tools</h2>
-        <span class="text-xs bg-gold-100 text-gold-700 px-2 py-1 rounded-full font-semibold">{practiceLessons.length} modules</span>
+    <section id="practice" class="mb-8">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0"></div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl" style="color:#1c1008">Practice Tools</h2>
+        <span class="badge badge-practice">{practice.length} modules</span>
       </div>
-      <div class="grid sm:grid-cols-3 gap-4">
-        {practiceLessons.map(l => <LessonCard {...l} level="practice" />)}
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+        {practice.map(l=><LessonCard {...l} level="practice"/>)}
       </div>
     </section>
+
+    <!-- CTA -->
+    <div class="text-center mt-10">
+      <a href="/practice" class="btn-primary inline-flex">🎹 Open Practice Tool</a>
+    </div>
   </div>
 </Layout>

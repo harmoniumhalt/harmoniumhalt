@@ -1,168 +1,87 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const notesPacks = [
-  {
-    title: 'Complete Sargam Scale Chart',
-    description: 'All 12 major and minor scales in Indian sargam notation with Western equivalents. Perfect for daily practice.',
-    pages: '4 pages',
-    category: 'Scales',
-    icon: '🎼',
-    free: true,
-  },
-  {
-    title: 'Popular Bhajans — Sargam Notations',
-    description: 'Sargam notations for 15 popular bhajans including Raghupati Raghav, Om Jai Jagdish, and Vaishnav Jan To.',
-    pages: '12 pages',
-    category: 'Bhajans',
-    icon: '🙏',
-    free: true,
-  },
-  {
-    title: '10 Essential Alankars',
-    description: 'Complete alankar guide with ascending/descending patterns, fingering tips, and practice tempo guidelines.',
-    pages: '6 pages',
-    category: 'Practice',
-    icon: '🔄',
-    free: true,
-  },
-  {
-    title: 'Raga Yaman — Complete Notes',
-    description: 'Full notation for Raga Yaman: aroha, avaroha, pakad, characteristic phrases, and a simple bandish.',
-    pages: '8 pages',
-    category: 'Ragas',
-    icon: '🌙',
-    free: true,
-  },
-  {
-    title: 'Raga Bhairavi — Complete Notes',
-    description: 'Comprehensive notes for Raga Bhairavi with all characteristic phrases and popular compositions.',
-    pages: '8 pages',
-    category: 'Ragas',
-    icon: '🌅',
-    free: true,
-  },
-  {
-    title: 'Beginner Harmonium Handbook',
-    description: 'Complete beginner reference: swaras, octaves, komal/tivra guide, posture tips, and first 5 songs.',
-    pages: '20 pages',
-    category: 'Beginner',
-    icon: '📗',
-    free: true,
-  },
-  {
-    title: 'Bollywood Songs Collection',
-    description: 'Sargam notations for 10 popular Bollywood songs adapted for harmonium.',
-    pages: '15 pages',
-    category: 'Songs',
-    icon: '🎬',
-    free: true,
-  },
-  {
-    title: 'Harmonium Fingering Chart',
-    description: 'Visual guide to finger placement for all common note sequences and alankars.',
-    pages: '3 pages',
-    category: 'Technique',
-    icon: '👐',
-    free: true,
-  },
+const packs=[
+  {t:'Complete Sargam Scale Chart',d:'All 12 scales in Indian sargam with Western equivalents.',p:'4 pages',cat:'Scales',icon:'🎼'},
+  {t:'Popular Bhajans — Sargam Notations',d:'15 popular bhajans including Raghupati Raghav and Om Jai Jagdish.',p:'12 pages',cat:'Bhajans',icon:'🙏'},
+  {t:'10 Essential Alankars',d:'Complete alankar guide with ascending/descending patterns.',p:'6 pages',cat:'Practice',icon:'🔄'},
+  {t:'Raga Yaman — Complete Notes',d:'Full notation: aroha, avaroha, pakad, characteristic phrases.',p:'8 pages',cat:'Ragas',icon:'🌙'},
+  {t:'Raga Bhairavi — Complete Notes',d:'Comprehensive notes with all characteristic phrases.',p:'8 pages',cat:'Ragas',icon:'🌅'},
+  {t:'Beginner Harmonium Handbook',d:'Complete beginner reference: swaras, octaves, posture, first 5 songs.',p:'20 pages',cat:'Beginner',icon:'📗'},
+  {t:'Bollywood Songs Collection',d:'Sargam notations for 10 popular Bollywood songs.',p:'15 pages',cat:'Songs',icon:'🎬'},
+  {t:'Harmonium Fingering Chart',d:'Visual guide to finger placement for all common sequences.',p:'3 pages',cat:'Technique',icon:'👐'},
 ];
 ---
-
-<Layout
-  title="Free Harmonium Notes & PDF Downloads | Harmonium Halt"
-  description="Download free harmonium notes PDF. Includes sargam scale charts, bhajan notations, alankars, raga notes, and complete beginner handbook. All free."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a>
-      <span class="mx-2">›</span>
-      <span class="text-ebony/70">Notes & Downloads</span>
-    </div>
+<Layout title="Free Harmonium Notes & PDF Downloads | Harmonium Halt"
+  description="Download free harmonium notes PDF — sargam scale charts, bhajan notations, alankars, raga notes, and complete beginner handbook. All free.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb"><a href="/">Home</a><span class="mx-1.5">›</span><span>Notes & Downloads</span></div>
   </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="text-center mb-10">
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Notes & Free Downloads</h1>
-      <p class="text-ebony/60 text-lg max-w-2xl mx-auto">Download free harmonium practice notes, sargam charts, bhajan collections, and raga guides in PDF format.</p>
-      <div class="inline-flex items-center gap-2 mt-4 bg-green-50 border border-green-200 text-green-700 text-sm font-semibold px-4 py-2 rounded-full">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="text-center mb-8 sm:mb-10">
+      <h1 class="section-title text-3xl sm:text-4xl mb-3" style="color:#1c1008">Notes & Free Downloads</h1>
+      <p class="text-sm sm:text-base mb-4 max-w-xl mx-auto" style="color:rgba(28,16,8,.55);font-family:'Plus Jakarta Sans',sans-serif">Download free harmonium practice notes, sargam charts, bhajan collections, and raga guides in PDF format.</p>
+      <span class="inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-full" style="background:#dcfce7;color:#166534;border:1px solid #bbf7d0;font-family:'Plus Jakarta Sans',sans-serif">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         All downloads are completely free
-      </div>
+      </span>
     </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      {notesPacks.map(pack => (
-        <div class="bg-white rounded-xl border border-ebony/8 shadow-sm hover:shadow-md transition-all overflow-hidden group">
-          <div class="h-2 bg-gradient-to-r from-saffron-400 to-burgundy-600"></div>
-          <div class="p-5">
-            <div class="flex items-start justify-between mb-3">
-              <span class="text-3xl">{pack.icon}</span>
-              <span class="text-xs bg-ebony/5 text-ebony/60 px-2 py-1 rounded-full">{pack.category}</span>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      {packs.map(pk=>(
+        <div class="bg-white rounded-2xl border overflow-hidden flex flex-col" style="border-color:rgba(28,16,8,.08)">
+          <div class="h-1.5" style="background:linear-gradient(90deg,#c8360a,#d4920a)"></div>
+          <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <div class="flex items-start justify-between mb-2 gap-2">
+              <span class="text-2xl sm:text-3xl">{pk.icon}</span>
+              <span class="text-xs px-2 py-0.5 rounded-full flex-shrink-0" style="background:#fef3c7;color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">{pk.cat}</span>
             </div>
-            <h3 class="font-display font-bold text-ebony text-sm mb-2 leading-snug">{pack.title}</h3>
-            <p class="text-xs text-ebony/60 mb-3 leading-relaxed">{pack.description}</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-ebony/40">{pack.pages}</span>
-              <span class="text-xs font-bold text-green-600">FREE</span>
+            <h3 class="font-bold text-xs sm:text-sm mb-1.5 leading-snug flex-1" style="color:#1c1008;font-family:'Plus Jakarta Sans',sans-serif">{pk.t}</h3>
+            <p class="text-xs mb-3 leading-relaxed" style="color:rgba(28,16,8,.55);font-family:'Plus Jakarta Sans',sans-serif">{pk.d}</p>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs" style="color:rgba(28,16,8,.35);font-family:'Plus Jakarta Sans',sans-serif">{pk.p}</span>
+              <span class="text-xs font-bold" style="color:#166534;font-family:'Plus Jakarta Sans',sans-serif">FREE</span>
             </div>
-            <button
-              class="mt-3 w-full bg-saffron-50 hover:bg-saffron-100 border border-saffron-200 text-saffron-700 text-xs font-bold py-2 rounded-lg transition-all flex items-center justify-center gap-1.5"
-              onclick="alert('PDF download will be available soon. Check back shortly!')"
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <button onclick="alert('PDF downloads coming soon! Check back shortly.')"
+              class="w-full py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
+              style="background:#fef9f0;border:1px solid rgba(212,146,10,.3);color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download PDF
             </button>
           </div>
         </div>
       ))}
     </div>
-
-    <!-- Online Reference Section -->
-    <div class="mt-16">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-6 text-center">Quick Reference — Sargam Chart</h2>
-      <div class="bg-white rounded-2xl border border-ebony/8 shadow-sm overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead class="bg-gradient-to-r from-saffron-500 to-burgundy-700 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Swara</th>
-                <th class="px-4 py-3 text-left font-semibold">Devanagari</th>
-                <th class="px-4 py-3 text-left font-semibold">Full Name</th>
-                <th class="px-4 py-3 text-left font-semibold">Western</th>
-                <th class="px-4 py-3 text-left font-semibold">Frequency (Oct 4)</th>
-                <th class="px-4 py-3 text-left font-semibold">Type</th>
+    <!-- Quick ref table -->
+    <div class="mt-10 sm:mt-14">
+      <h2 class="section-title text-2xl sm:text-3xl text-center mb-6" style="color:#1c1008">Quick Reference — All 12 Swaras</h2>
+      <div class="bg-white rounded-2xl border overflow-hidden" style="border-color:rgba(28,16,8,.08)">
+        <div class="table-wrap">
+          <table class="w-full text-xs sm:text-sm" style="min-width:480px">
+            <thead>
+              <tr style="background:linear-gradient(90deg,#c8360a,#d4920a)">
+                <th class="px-3 sm:px-4 py-3 text-left text-white font-semibold">Swara</th>
+                <th class="px-3 sm:px-4 py-3 text-left text-white font-semibold">Hindi</th>
+                <th class="px-3 sm:px-4 py-3 text-left text-white font-semibold">Western</th>
+                <th class="px-3 sm:px-4 py-3 text-left text-white font-semibold">Type</th>
+                <th class="px-3 sm:px-4 py-3 text-left text-white font-semibold">Hz</th>
               </tr>
             </thead>
             <tbody>
               {[
-                ['Sa', 'सा', 'Shadja', 'C', '261.63 Hz', 'Achala', false],
-                ['Komal Re', 'ऋ', 'Komal Rishabh', 'C#', '277.18 Hz', 'Komal', true],
-                ['Re', 'रे', 'Rishabh', 'D', '293.66 Hz', 'Shuddha', false],
-                ['Komal Ga', 'ग॒', 'Komal Gandhar', 'D#', '311.13 Hz', 'Komal', true],
-                ['Ga', 'ग', 'Gandhar', 'E', '329.63 Hz', 'Shuddha', false],
-                ['Ma', 'म', 'Madhyama', 'F', '349.23 Hz', 'Shuddha', false],
-                ['Tivra Ma', 'म॑', 'Tivra Madhyama', 'F#', '369.99 Hz', 'Tivra', true],
-                ['Pa', 'प', 'Pancham', 'G', '392.00 Hz', 'Achala', false],
-                ['Komal Dha', 'ध॒', 'Komal Dhaivat', 'G#', '415.30 Hz', 'Komal', true],
-                ['Dha', 'ध', 'Dhaivat', 'A', '440.00 Hz', 'Shuddha', false],
-                ['Komal Ni', 'नि॒', 'Komal Nishad', 'A#', '466.16 Hz', 'Komal', true],
-                ['Ni', 'नि', 'Nishad', 'B', '493.88 Hz', 'Shuddha', false],
-              ].map(([s, d, n, w, f, t, isBlack], i) => (
-                <tr class={`border-b border-ebony/6 ${isBlack ? 'bg-ebony/3' : ''} ${i % 2 === 0 && !isBlack ? 'bg-white' : ''}`}>
-                  <td class={`px-4 py-2.5 font-bold ${isBlack ? 'text-burgundy-600' : 'text-saffron-700'}`}>{s}</td>
-                  <td class="px-4 py-2.5 font-[Tiro_Devanagari_Hindi] text-base">{d}</td>
-                  <td class="px-4 py-2.5 text-ebony/70">{n}</td>
-                  <td class="px-4 py-2.5 font-mono">{w}</td>
-                  <td class="px-4 py-2.5 text-ebony/50 text-xs">{f}</td>
-                  <td class="px-4 py-2.5">
-                    <span class={`text-xs px-2 py-0.5 rounded-full font-semibold ${
-                      t === 'Achala' ? 'bg-blue-100 text-blue-700' :
-                      t === 'Komal' ? 'bg-burgundy-100 text-burgundy-700' :
-                      t === 'Tivra' ? 'bg-green-100 text-green-700' :
-                      'bg-saffron-100 text-saffron-700'
-                    }`}>{t}</span>
+                ['Sa','सा','C','Achala','261.63'],['Komal Re','ऋ','C#','Komal','277.18'],
+                ['Re','रे','D','Shuddha','293.66'],['Komal Ga','ग॒','D#','Komal','311.13'],
+                ['Ga','ग','E','Shuddha','329.63'],['Ma','म','F','Shuddha','349.23'],
+                ['Tivra Ma','म॑','F#','Tivra','369.99'],['Pa','प','G','Achala','392.00'],
+                ['Komal Dha','ध॒','G#','Komal','415.30'],['Dha','ध','A','Shuddha','440.00'],
+                ['Komal Ni','नि॒','A#','Komal','466.16'],['Ni','नि','B','Shuddha','493.88'],
+              ].map(([sw,hi,wes,type,hz],i)=>(
+                <tr style={`${i%2===0?'':'background:#fdf9f4'}`}>
+                  <td class="px-3 sm:px-4 py-2.5 font-bold" style={`color:${type==='Komal'||type==='Tivra'?'#9e2808':'#c8360a'};font-family:'Plus Jakarta Sans',sans-serif`}>{sw}</td>
+                  <td class="px-3 sm:px-4 py-2.5" style="color:#1c1008">{hi}</td>
+                  <td class="px-3 sm:px-4 py-2.5 font-mono">{wes}</td>
+                  <td class="px-3 sm:px-4 py-2.5">
+                    <span class="text-xs px-2 py-0.5 rounded-full font-semibold" style={`${type==='Achala'?'background:#dbeafe;color:#1e40af':type==='Komal'?'background:#fee2e2;color:#991b1b':type==='Tivra'?'background:#dcfce7;color:#166534':'background:#fef3c7;color:#92400e'};font-family:'Plus Jakarta Sans',sans-serif`}>{type}</span>
                   </td>
+                  <td class="px-3 sm:px-4 py-2.5 font-mono text-xs" style="color:rgba(28,16,8,.4)">{hz}</td>
                 </tr>
               ))}
             </tbody>
@@ -170,11 +89,8 @@ const notesPacks = [
         </div>
       </div>
     </div>
-
-    <div class="mt-10 text-center">
-      <a href="/practice" class="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg">
-        🎹 Practice on Web Harmonium
-      </a>
+    <div class="mt-8 text-center">
+      <a href="/practice" class="btn-primary inline-flex">🎹 Practice on Web Harmonium</a>
     </div>
   </div>
 </Layout>

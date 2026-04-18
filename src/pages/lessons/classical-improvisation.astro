@@ -2,52 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-<Layout
-  title="Classical Improvisation on Harmonium | Harmonium Halt"
-  description="Classical Improvisation on Harmonium — Free harmonium lesson with interactive practice tool. Learn harmonium online at Harmonium Halt."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Classical Improvisation on Harmonium</span>
+<Layout title="Classical Improvisation | Harmonium Halt"
+  description="Improvise freely within raga grammar using gamak, meend, andolan, and murki ornaments. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Classical Improvisation</span>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-burgundy-100 text-burgundy-700 px-3 py-1 rounded-full">Advanced</span>
-        <span class="text-xs text-ebony/40">⏱ 45 min</span>
-        <span class="text-xs text-ebony/40">Advanced</span>
+        <span class="badge badge-advanced capitalize">advanced</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 45 min · Advanced</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Classical Improvisation on Harmonium</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">A detailed lesson on Classical Improvisation on Harmonium for harmonium students. Practice concepts directly using our interactive web harmonium below.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Classical Improvisation</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Improvise freely within raga grammar using gamak, meend, andolan, and murki ornaments.</p>
     </div>
-    <div class="prose-harmonium">
-      <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-6">
-        <p class="text-sm text-saffron-800">🎹 This lesson includes an <strong>interactive harmonium</strong> below. Scroll down to practice immediately after reading each section.</p>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Improvisation must stay within raga rules — not random</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Gamak = rapid oscillation between two notes</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Meend = smooth slide between notes</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Andolan = gentle wave on a single sustained note</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Alaap = slow rhythmless exploration of a raga</li>
+      </ul>
+    </div>
+    <div class="prose-hm">
+      <h2>What Classical Improvisation Is</h2>
+      <p>In Indian classical music improvisation is creative exploration within the strict grammar of a raga. You use the raga's specific notes characteristic phrases ornaments and emotional quality to create music that is simultaneously spontaneous and deeply structured. It takes years to master but every aspect begins developing from your very first practice session.</p>
+
+      <h2>Gamak — The Oscillation</h2>
+      <p>Gamak is a rapid oscillation between two adjacent notes adding intensity and power. On harmonium simulate gamak by rapidly alternating between two adjacent keys in a controlled tremolo-like motion. For example alternating quickly between Sa and Re (A and S) or between Ga and Ma. Gamak is most effective on important vadi and samvadi notes.</p>
+
+      <h2>Meend — The Glide</h2>
+      <p>Meend is a smooth glide between notes — one of the most expressive ornaments. On harmonium (unlike sitar or sarangi) true continuous meend is not physically possible. However you can strongly suggest meend by moving through intermediate notes very rapidly and smoothly creating the impression of a slide. This technique improves with experience.</p>
+
+      <h2>Alaap — Slow Raga Exploration</h2>
+      <p>Alaap is the opening unaccompanied section of a classical performance where the musician explores the raga slowly without rhythmic accompaniment. Practice alaap in Yaman: begin with just Sa and Pa. Gradually add Ga then Dha. Slowly reveal the full raga over several minutes. Even 2 minutes of structured alaap demonstrates significant classical understanding.</p>
+
+      <h2>Building a Complete Improvisation</h2>
+      <p>Structure your improvisation in four stages: Alaap (slow unaccompanied note exploration), Jod (adding rhythmic movement without tabla), Jhala (fast rhythmic improvisation), Bandish (fixed composition). Even a simplified 5-minute version of this structure — 2 minutes alaap 1 minute faster exploration 2 minutes bandish — is a complete classical musical statement.</p>
+
+    </div>
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
-      <h2>Overview</h2>
-      <p>This lesson covers Classical Improvisation on Harmonium in depth. It is part of the Advanced curriculum at Harmonium Halt, designed to give you a clear, practical understanding with immediate application on the harmonium.</p>
-      <h2>Core Concepts</h2>
-      <p>Work through each concept carefully, then use the harmonium tool at the bottom of the page to practice what you've learned. Consistent application is the key to rapid progress.</p>
-      <h2>Practice Exercises</h2>
-      <p>Use the web harmonium below to practice the exercises in this lesson. Start slowly, then gradually increase your speed as the patterns become comfortable.</p>
     </div>
-    <div class="mt-8 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
-      </div>
-    </div>
-    <div class="flex justify-between mt-8">
-      <a href="/lessons" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         All Lessons
       </a>
-      <a href="/practice" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all text-sm">
-        Full Practice Tool →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

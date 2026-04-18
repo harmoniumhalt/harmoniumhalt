@@ -2,52 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Harmonium from '../../components/Harmonium.astro';
 ---
-<Layout
-  title="Major Scales Practice | Harmonium Halt"
-  description="Major Scales Practice — Free harmonium lesson with interactive practice tool. Learn harmonium online at Harmonium Halt."
->
-  <div class="bg-white border-b border-ebony/8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
-      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
-      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
-      <span class="text-ebony/70">Major Scales Practice</span>
+<Layout title="Major Scales Practice | Harmonium Halt"
+  description="Practice all 12 major scales to build complete keyboard fluency and prepare for any raga. Free harmonium lesson with interactive web harmonium tool.">
+  <div class="bg-white border-b" style="border-color:rgba(28,16,8,.08)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2.5 breadcrumb">
+      <a href="/">Home</a><span class="mx-1.5">›</span>
+      <a href="/lessons">Lessons</a><span class="mx-1.5">›</span>
+      <span>Major Scales Practice</span>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="mb-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-6 sm:mb-8">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full">Beginner</span>
-        <span class="text-xs text-ebony/40">⏱ 20 min</span>
-        <span class="text-xs text-ebony/40">Lesson 7 of 8</span>
+        <span class="badge badge-beginner capitalize">beginner</span>
+        <span class="text-xs" style="color:rgba(28,16,8,.4);font-family:'Plus Jakarta Sans',sans-serif">⏱ 20 min · Lesson 8 of 8</span>
       </div>
-      <h1 class="font-display font-black text-4xl text-ebony mb-3">Major Scales Practice</h1>
-      <p class="text-xl text-ebony/60 leading-relaxed">A detailed lesson on Major Scales Practice for harmonium students. Practice concepts directly using our interactive web harmonium below.</p>
+      <h1 class="section-title text-2xl sm:text-3xl lg:text-4xl mb-3" style="color:#1c1008">Major Scales Practice</h1>
+      <p class="text-sm sm:text-base leading-relaxed" style="color:rgba(28,16,8,.6);font-family:'Plus Jakarta Sans',sans-serif">Practice all 12 major scales to build complete keyboard fluency and prepare for any raga.</p>
     </div>
-    <div class="prose-harmonium">
-      <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-6">
-        <p class="text-sm text-saffron-800">🎹 This lesson includes an <strong>interactive harmonium</strong> below. Scroll down to practice immediately after reading each section.</p>
+    <div class="rounded-xl p-4 sm:p-5 mb-6 border" style="background:#fef9f0;border-color:rgba(212,146,10,.25)">
+      <h3 class="font-bold text-sm mb-3" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif">📌 Key Takeaways</h3>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>12 positions of Sa = 12 major scales to master</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>All major scales use the same interval pattern</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Start with C major (Sa on C) — easiest fingering</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Each scale takes 1–2 weeks to fully internalize</li>
+        <li class="flex items-start gap-2 text-xs sm:text-sm" style="color:#92400e;font-family:'Plus Jakarta Sans',sans-serif"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>Scale mastery directly unlocks raga understanding</li>
+      </ul>
+    </div>
+    <div class="prose-hm">
+      <h2>Why Practice All 12 Scales</h2>
+      <p>Each raga has a preferred tonic (Sa) position and different vocalists need different keys for their vocal range. A harmonium player fluent in all 12 scales can instantly accommodate any singer or instrument. Scale practice also ensures you are equally comfortable in every keyboard position — no key feels foreign.</p>
+
+      <h2>C Major Scale</h2>
+      <p>Sa on C key. Ascending: S R G M P D N S using keys A S D F G H J K. This is the standard starting position for all harmonium learning. Master this scale until you can play it from memory with eyes closed at 90 BPM before moving to other keys. Your C major scale is the template for all others.</p>
+
+      <h2>G Major Scale</h2>
+      <p>Sa on G key. The pattern of intervals is identical to C major but starting from G. Note that in this scale the fourth degree naturally becomes Tivra Ma (F sharp) — a black key. This is because the major scale pattern requires a whole step between the third and fourth degree. This scale appears naturally in Raga Yaman.</p>
+
+      <h2>Scale Practice Method</h2>
+      <p>For each new scale: First play ascending 5 times very slowly while saying swara names. Then descending 5 times. Then ascending and descending without stopping. Then gradually increase tempo over several days. Finally practice with eyes closed to build complete independence from visual reference. This systematic approach builds scale fluency efficiently.</p>
+
+      <h2>Scales and Ragas Connection</h2>
+      <p>Every raga derives from a parent scale called a thaat. Raga Yaman uses the Kalyan thaat (like Western Lydian mode — major scale with raised 4th). Raga Bhairavi uses the Bhairavi thaat (komal Re Ga Dha Ni — like Phrygian mode). Understanding scales directly reveals raga structure and makes learning new ragas much faster.</p>
+
+    </div>
+    <div class="mt-8 mb-6">
+      <h2 class="font-display font-bold text-xl sm:text-2xl mb-3" style="color:#1c1008">Practice Now</h2>
+      <p class="text-xs sm:text-sm mb-4" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif">Apply what you just learned on the interactive harmonium below.</p>
+      <div class="rounded-2xl p-4 sm:p-6" style="background:linear-gradient(135deg,#1c1008,#3d1a08)">
+        <Harmonium/>
       </div>
-      <h2>Overview</h2>
-      <p>This lesson covers Major Scales Practice in depth. It is part of the Beginner curriculum at Harmonium Halt, designed to give you a clear, practical understanding with immediate application on the harmonium.</p>
-      <h2>Core Concepts</h2>
-      <p>Work through each concept carefully, then use the harmonium tool at the bottom of the page to practice what you've learned. Consistent application is the key to rapid progress.</p>
-      <h2>Practice Exercises</h2>
-      <p>Use the web harmonium below to practice the exercises in this lesson. Start slowly, then gradually increase your speed as the patterns become comfortable.</p>
     </div>
-    <div class="mt-8 mb-8">
-      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
-      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
-        <Harmonium />
-      </div>
-    </div>
-    <div class="flex justify-between mt-8">
-      <a href="/lessons" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+    <div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 mt-8 pt-6 border-t" style="border-color:rgba(28,16,8,.08)">
+      <a href="/lessons" class="flex items-center gap-2 text-sm" style="color:rgba(28,16,8,.5);font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         All Lessons
       </a>
-      <a href="/practice" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all text-sm">
-        Full Practice Tool →
-      </a>
+      <a href="/practice" class="btn-primary justify-center text-center">Open Full Practice Tool →</a>
     </div>
   </div>
 </Layout>

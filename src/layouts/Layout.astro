@@ -8,111 +8,87 @@ export interface Props {
   description?: string;
   image?: string;
   type?: string;
-  canonical?: string;
   noindex?: boolean;
   schema?: object | object[];
 }
 
 const {
   title,
-  description = 'Learn harmonium online for free. Play our interactive web harmonium, follow structured lessons from beginner to advanced, and practice daily with expert guidance.',
-  image = '/og-image.jpg',
+  description = 'Play a real harmonium online in your browser. Free structured lessons from beginner to advanced — Sa Re Ga Ma, alankars, ragas, bhajans. India\'s best free harmonium learning platform.',
+  image = '/og.png',
   type = 'website',
-  canonical,
   noindex = false,
   schema,
 } = Astro.props;
 
-const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).href;
-const siteName = 'Harmonium Halt';
-const siteURL = 'https://www.harmoniumhalt.com';
+const site    = 'https://www.harmoniumhalt.com';
+const canonical = new URL(Astro.url.pathname, site).href;
 ---
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
   <title>{title}</title>
-  <meta name="description" content={description} />
-  {noindex && <meta name="robots" content="noindex, nofollow" />}
-  {!noindex && <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />}
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonical}/>
+  {noindex
+    ? <meta name="robots" content="noindex,nofollow"/>
+    : <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+  }
 
-  <link rel="canonical" href={canonicalURL} />
+  <!-- OG -->
+  <meta property="og:type"        content={type}/>
+  <meta property="og:url"         content={canonical}/>
+  <meta property="og:title"       content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:image"       content={`${site}${image}`}/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:site_name"   content="Harmonium Halt"/>
+  <meta property="og:locale"      content="en_IN"/>
 
-  <!-- Open Graph -->
-  <meta property="og:type" content={type} />
-  <meta property="og:url" content={canonicalURL} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={`${siteURL}${image}`} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content={siteName} />
-  <meta property="og:locale" content="en_IN" />
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content={title}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image"       content={`${site}${image}`}/>
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content={canonicalURL} />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={`${siteURL}${image}`} />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#8d203d" />
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="manifest" href="/site.webmanifest"/>
+  <meta name="theme-color" content="#3d1a08"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
   <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
-  <!-- Schema Markup -->
-  {schema && (
-    <script type="application/ld+json" set:html={JSON.stringify(Array.isArray(schema) ? schema : [schema])} />
-  )}
-
-  <!-- Base Organization Schema -->
+  <!-- Base Schema -->
   <script type="application/ld+json">{JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${siteURL}/#organization`,
-        "name": "Harmonium Halt",
-        "url": siteURL,
-        "logo": {
-          "@type": "ImageObject",
-          "url": `${siteURL}/logo.png`
-        },
-        "description": "India's premier online harmonium learning platform with interactive web harmonium and structured lessons.",
-        "sameAs": []
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${siteURL}/#website`,
-        "url": siteURL,
-        "name": "Harmonium Halt",
-        "description": "Play Online Web Harmonium, Learn Easily, Practice Daily",
-        "publisher": { "@id": `${siteURL}/#organization` },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": `${siteURL}/search?q={search_term_string}` },
-          "query-input": "required name=search_term_string"
-        }
-      }
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":`${site}/#org`,"name":"Harmonium Halt","url":site,
+       "logo":{"@type":"ImageObject","url":`${site}/favicon.svg`},
+       "description":"India's premier free online harmonium learning platform."},
+      {"@type":"WebSite","@id":`${site}/#website`,"url":site,"name":"Harmonium Halt",
+       "description":"Play Online Web Harmonium, Learn Easily, Practice Daily",
+       "publisher":{"@id":`${site}/#org`}}
     ]
   })}</script>
+
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}/>
+  )}
 </head>
-<body class="antialiased">
-  <Navbar />
-  <main>
-    <slot />
+<body>
+  <Navbar/>
+  <main id="main-content">
+    <slot/>
   </main>
-  <Footer />
+  <Footer/>
 </body>
 </html>

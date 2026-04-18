@@ -1,107 +1,125 @@
 ---
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/lessons', label: 'Lessons' },
-  { href: '/practice', label: 'Practice' },
-  { href: '/notes', label: 'Notes' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About' },
+const links = [
+  { href:'/',          label:'Home'     },
+  { href:'/lessons',   label:'Lessons'  },
+  { href:'/practice',  label:'Practice' },
+  { href:'/notes',     label:'Notes'    },
+  { href:'/blog',      label:'Blog'     },
+  { href:'/about',     label:'About'    },
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-ebony/95 backdrop-blur-sm border-b border-gold-500/20">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
+<header class="sticky top-0 z-50" style="background:rgba(28,16,8,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,146,10,.15)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-14 sm:h-16">
+
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
-        <div class="w-9 h-9 bg-gradient-to-br from-saffron-400 to-burgundy-700 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-saffron-500/30 transition-shadow">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="14" width="2" height="6" rx="1" fill="white"/>
-            <rect x="5" y="12" width="2" height="8" rx="1" fill="white"/>
-            <rect x="8" y="14" width="2" height="6" rx="1" fill="white"/>
-            <rect x="11" y="11" width="2" height="9" rx="1" fill="white"/>
-            <rect x="14" y="14" width="2" height="6" rx="1" fill="white"/>
-            <rect x="17" y="12" width="2" height="8" rx="1" fill="white"/>
-            <rect x="20" y="14" width="2" height="6" rx="1" fill="white"/>
-            <rect x="4" y="9" width="1.5" height="5" rx="0.75" fill="rgba(255,200,100,0.8)"/>
-            <rect x="7" y="9" width="1.5" height="5" rx="0.75" fill="rgba(255,200,100,0.8)"/>
-            <rect x="13" y="8" width="1.5" height="6" rx="0.75" fill="rgba(255,200,100,0.8)"/>
-            <rect x="16" y="9" width="1.5" height="5" rx="0.75" fill="rgba(255,200,100,0.8)"/>
+      <a href="/" class="flex items-center gap-2 flex-shrink-0" aria-label="Harmonium Halt Home">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+             style="background:linear-gradient(135deg,#c8360a,#7a0000)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="2"  y="14" width="2.2" height="7" rx="1.1" fill="white"/>
+            <rect x="5.2" y="11" width="2.2" height="10" rx="1.1" fill="white"/>
+            <rect x="8.4" y="14" width="2.2" height="7" rx="1.1" fill="white"/>
+            <rect x="11.6" y="9"  width="2.2" height="12" rx="1.1" fill="white"/>
+            <rect x="14.8" y="14" width="2.2" height="7" rx="1.1" fill="white"/>
+            <rect x="18"  y="11" width="2.2" height="10" rx="1.1" fill="white"/>
+            <rect x="4"   y="6"  width="1.6" height="8"  rx=".8" fill="#f0aa0e"/>
+            <rect x="7.2" y="6"  width="1.6" height="8"  rx=".8" fill="#f0aa0e"/>
+            <rect x="13.6" y="5" width="1.6" height="9"  rx=".8" fill="#f0aa0e"/>
+            <rect x="16.8" y="6" width="1.6" height="8"  rx=".8" fill="#f0aa0e"/>
           </svg>
         </div>
-        <div class="leading-tight">
-          <span class="block font-display font-bold text-gold-400 text-lg tracking-tight leading-none">Harmonium</span>
-          <span class="block font-display text-ivory/70 text-xs tracking-widest uppercase">Halt</span>
+        <div class="leading-none">
+          <span class="block font-display font-bold text-base sm:text-lg leading-none" style="color:#f0aa0e">Harmonium</span>
+          <span class="block text-xs tracking-widest uppercase" style="color:rgba(250,246,239,.5);font-family:'Plus Jakarta Sans',sans-serif">Halt</span>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <ul class="hidden md:flex items-center gap-1">
-        {navLinks.map(link => (
-          <li>
-            <a
-              href={link.href}
-              class="px-3 py-2 text-sm font-medium text-ivory/70 hover:text-gold-400 rounded-md hover:bg-white/5 transition-all duration-200"
-            >
-              {link.label}
-            </a>
-          </li>
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+        {links.map(l => (
+          <a href={l.href}
+             class="px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+             style="color:rgba(250,246,239,.7);font-family:'Plus Jakarta Sans',sans-serif"
+             onmouseover="this.style.color='#f0aa0e';this.style.background='rgba(255,255,255,.06)'"
+             onmouseout="this.style.color='rgba(250,246,239,.7)';this.style.background='transparent'">
+            {l.label}
+          </a>
         ))}
-      </ul>
+      </nav>
 
-      <!-- CTA + Mobile Toggle -->
-      <div class="flex items-center gap-3">
-        <a
-          href="/practice"
-          class="hidden sm:inline-flex items-center gap-1.5 bg-gradient-to-r from-saffron-500 to-saffron-600 hover:from-saffron-400 hover:to-saffron-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200 shadow-lg shadow-saffron-500/20"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Play Now
+      <!-- CTA + hamburger -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="/practice" class="hidden sm:inline-flex items-center gap-1.5 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-2 rounded-xl transition-all"
+           style="background:linear-gradient(135deg,#c8360a,#e8430c);font-family:'Plus Jakarta Sans',sans-serif;box-shadow:0 4px 12px rgba(200,54,10,.35)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21"/></svg>
+          <span class="hidden xs:inline">Play Now</span>
+          <span class="xs:hidden">Play</span>
         </a>
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden text-ivory/70 hover:text-gold-400 p-2"
-          aria-label="Toggle menu"
-        >
-          <svg id="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
+        <button id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                class="lg:hidden flex items-center justify-center w-9 h-9 rounded-lg"
+                style="color:rgba(250,246,239,.8);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)">
+          <svg id="icon-open"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
-          <svg id="close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
+          <svg id="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="hidden">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-white/10 mt-2 pt-3">
-      {navLinks.map(link => (
-        <a
-          href={link.href}
-          class="block px-3 py-2.5 text-sm font-medium text-ivory/70 hover:text-gold-400 hover:bg-white/5 rounded-md transition-colors"
-        >
-          {link.label}
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden pb-4 pt-2" role="navigation" aria-label="Mobile navigation">
+      <div class="flex flex-col gap-0.5">
+        {links.map(l => (
+          <a href={l.href}
+             class="flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-colors nav-mobile-link"
+             style="color:rgba(250,246,239,.75);font-family:'Plus Jakarta Sans',sans-serif">
+            {l.label}
+          </a>
+        ))}
+        <a href="/practice"
+           class="mt-2 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm text-white"
+           style="background:linear-gradient(135deg,#c8360a,#e8430c);font-family:'Plus Jakarta Sans',sans-serif">
+          🎵 Play Web Harmonium
         </a>
-      ))}
-      <a href="/practice" class="mt-3 block text-center bg-saffron-500 text-white font-semibold py-2.5 rounded-lg text-sm">
-        🎵 Play Harmonium
-      </a>
+      </div>
     </div>
-  </nav>
+  </div>
 </header>
 
 <script>
-const btn = document.getElementById('mobile-menu-btn');
-const menu = document.getElementById('mobile-menu');
-const menuIcon = document.getElementById('menu-icon');
-const closeIcon = document.getElementById('close-icon');
+(function(){
+  const btn   = document.getElementById('nav-toggle');
+  const menu  = document.getElementById('mobile-menu');
+  const open  = document.getElementById('icon-open');
+  const close = document.getElementById('icon-close');
+  if (!btn || !menu) return;
 
-btn?.addEventListener('click', () => {
-  const isHidden = menu?.classList.toggle('hidden');
-  menuIcon?.classList.toggle('hidden', !isHidden);
-  closeIcon?.classList.toggle('hidden', isHidden);
-});
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('hidden');
+    open.classList.toggle('hidden');
+    close.classList.toggle('hidden');
+  });
+
+  // close on link click
+  menu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      open.classList.remove('hidden');
+      close.classList.add('hidden');
+      btn.setAttribute('aria-expanded','false');
+    })
+  );
+
+  // hover style for mobile links
+  menu.querySelectorAll('.nav-mobile-link').forEach(a => {
+    a.addEventListener('mouseenter', ()=>{ a.style.color='#f0aa0e'; a.style.background='rgba(255,255,255,.06)'; });
+    a.addEventListener('mouseleave', ()=>{ a.style.color='rgba(250,246,239,.75)'; a.style.background='transparent'; });
+  });
+})();
 </script>
