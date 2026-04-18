@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.harmoniumhalt.com/sitemap-index.xml
