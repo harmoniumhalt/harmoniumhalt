@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Harmonium Halt — India's Free Online Harmonium Learning Platform"
+  description="Learn about Harmonium Halt — our mission to make harmonium education accessible to everyone in India and beyond. Free lessons, web harmonium tool, and expert content."
+>
+  <div class="bg-white border-b border-ebony/8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
+      <a href="/" class="hover:text-saffron-600">Home</a>
+      <span class="mx-2">›</span>
+      <span class="text-ebony/70">About</span>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero -->
+    <div class="text-center mb-12">
+      <div class="text-5xl mb-4">🎹</div>
+      <h1 class="font-display font-black text-4xl text-ebony mb-4">About Harmonium Halt</h1>
+      <p class="text-xl text-ebony/60 max-w-2xl mx-auto leading-relaxed">
+        Our mission is simple: make quality harmonium education accessible to every person in India and across the world — completely free.
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="bg-gradient-to-br from-burgundy-900 to-ebony text-white rounded-2xl p-8 mb-10">
+      <h2 class="font-display font-bold text-2xl text-gold-400 mb-4">Our Mission</h2>
+      <p class="text-ivory/80 leading-relaxed mb-4">
+        Harmonium is one of the most beloved instruments in India — heard in temples, homes, concert halls, and Bollywood studios. Yet quality harmonium education remains expensive and inaccessible for most people, particularly those in smaller cities and rural areas.
+      </p>
+      <p class="text-ivory/80 leading-relaxed">
+        Harmonium Halt was created to change that. We believe that every person with a love for music deserves access to expert harmonium education, regardless of where they live or their financial situation.
+      </p>
+    </div>
+
+    <!-- What We Offer -->
+    <div class="mb-10">
+      <h2 class="font-display font-bold text-2xl text-ebony mb-6">What We Offer</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        {[
+          { icon: '🎹', title: 'Interactive Web Harmonium', desc: 'A fully functional harmonium that plays in your browser using Web Audio API. Real sounds, responsive keys, and all the controls you need.' },
+          { icon: '📖', title: 'Structured Lessons', desc: 'A complete curriculum from absolute beginner (Sa Re Ga Ma) to advanced classical playing, designed by experienced music educators.' },
+          { icon: '🔄', title: 'Practice Tools', desc: 'Daily riyaaz plans, alankar patterns, scale charts, and rhythm exercises to build your skills systematically.' },
+          { icon: '📰', title: 'Expert Blog', desc: '25+ in-depth articles covering every aspect of harmonium — from buying guides to raga theory to maintenance tips.' },
+          { icon: '📄', title: 'Free Downloads', desc: 'Printable PDF notes for scales, bhajans, alankars, and ragas — take them to your practice sessions.' },
+          { icon: '🇮🇳', title: 'Bilingual Content', desc: 'Content available in both English and Hindi, making it accessible to learners across India.' },
+        ].map(item => (
+          <div class="flex gap-4 p-5 rounded-xl border border-ebony/8 bg-white">
+            <div class="text-2xl flex-shrink-0">{item.icon}</div>
+            <div>
+              <h3 class="font-semibold text-ebony mb-1">{item.title}</h3>
+              <p class="text-sm text-ebony/60 leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="mb-10">
+      <h2 class="font-display font-bold text-2xl text-ebony mb-6">Our Team</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        {[
+          { name: 'Pandit Ramakant Sharma', role: 'Senior Music Educator', bio: 'Over 25 years of experience teaching Hindustani classical music. Trained in the Kirana gharana tradition. Has taught harmonium to thousands of students across India.', initials: 'RS' },
+          { name: 'Dr. Meera Krishnan', role: 'Music Curriculum Designer', bio: 'PhD in Indian Musicology from Banaras Hindu University. Specializes in making classical music accessible to modern learners through structured curricula.', initials: 'MK' },
+          { name: 'Arjun Malhotra', role: 'Web Technology & Audio Engineer', bio: 'Full-stack developer and audio technology specialist. Built the Web Audio API harmonium engine that powers the interactive instrument on this platform.', initials: 'AM' },
+          { name: 'Priya Nair', role: 'Content Writer & Music Educator', bio: 'Trained in both Carnatic and Hindustani music traditions. Creates clear, beginner-friendly lesson content drawing from over a decade of teaching experience.', initials: 'PN' },
+        ].map(member => (
+          <div class="flex gap-4 p-5 rounded-xl border border-ebony/8 bg-white">
+            <div class="w-12 h-12 bg-gradient-to-br from-saffron-400 to-burgundy-700 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+              {member.initials}
+            </div>
+            <div>
+              <h3 class="font-semibold text-ebony">{member.name}</h3>
+              <p class="text-xs text-saffron-600 font-medium mb-2">{member.role}</p>
+              <p class="text-sm text-ebony/60 leading-relaxed">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="bg-saffron-50 border border-saffron-200 rounded-2xl p-8 text-center">
+      <h2 class="font-display font-bold text-2xl text-ebony mb-3">Get in Touch</h2>
+      <p class="text-ebony/60 mb-6">Have a question, suggestion, or want to collaborate? We'd love to hear from you.</p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all">
+        Contact Us →
+      </a>
+    </div>
+  </div>
+</Layout>

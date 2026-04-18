@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Harmonium from '../../components/Harmonium.astro';
+---
+<Layout
+  title="Major Scales Practice | Harmonium Halt"
+  description="Major Scales Practice — Free harmonium lesson with interactive practice tool. Learn harmonium online at Harmonium Halt."
+>
+  <div class="bg-white border-b border-ebony/8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-ebony/40">
+      <a href="/" class="hover:text-saffron-600">Home</a><span class="mx-2">›</span>
+      <a href="/lessons" class="hover:text-saffron-600">Lessons</a><span class="mx-2">›</span>
+      <span class="text-ebony/70">Major Scales Practice</span>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full">Beginner</span>
+        <span class="text-xs text-ebony/40">⏱ 20 min</span>
+        <span class="text-xs text-ebony/40">Lesson 7 of 8</span>
+      </div>
+      <h1 class="font-display font-black text-4xl text-ebony mb-3">Major Scales Practice</h1>
+      <p class="text-xl text-ebony/60 leading-relaxed">A detailed lesson on Major Scales Practice for harmonium students. Practice concepts directly using our interactive web harmonium below.</p>
+    </div>
+    <div class="prose-harmonium">
+      <div class="bg-saffron-50 border border-saffron-200 rounded-xl p-5 mb-6">
+        <p class="text-sm text-saffron-800">🎹 This lesson includes an <strong>interactive harmonium</strong> below. Scroll down to practice immediately after reading each section.</p>
+      </div>
+      <h2>Overview</h2>
+      <p>This lesson covers Major Scales Practice in depth. It is part of the Beginner curriculum at Harmonium Halt, designed to give you a clear, practical understanding with immediate application on the harmonium.</p>
+      <h2>Core Concepts</h2>
+      <p>Work through each concept carefully, then use the harmonium tool at the bottom of the page to practice what you've learned. Consistent application is the key to rapid progress.</p>
+      <h2>Practice Exercises</h2>
+      <p>Use the web harmonium below to practice the exercises in this lesson. Start slowly, then gradually increase your speed as the patterns become comfortable.</p>
+    </div>
+    <div class="mt-8 mb-8">
+      <h2 class="font-display font-bold text-2xl text-ebony mb-4">Practice Now</h2>
+      <div class="bg-gradient-to-br from-ebony to-wood-dark p-6 rounded-2xl">
+        <Harmonium />
+      </div>
+    </div>
+    <div class="flex justify-between mt-8">
+      <a href="/lessons" class="flex items-center gap-2 text-sm text-ebony/50 hover:text-ebony">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        All Lessons
+      </a>
+      <a href="/practice" class="bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all text-sm">
+        Full Practice Tool →
+      </a>
+    </div>
+  </div>
+</Layout>

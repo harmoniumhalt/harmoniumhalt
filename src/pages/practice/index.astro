@@ -1,0 +1,130 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Harmonium from '../../components/Harmonium.astro';
+---
+
+<Layout
+  title="Practice Harmonium Online — Web Harmonium Tool | Harmonium Halt"
+  description="Practice harmonium online with our interactive web harmonium. Full keyboard, octave controls, volume, Indian & Western notation. Free browser-based harmonium tool."
+>
+  <div class="bg-gradient-to-b from-ebony to-wood-dark min-h-screen py-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="text-center mb-8 text-white">
+        <h1 class="font-display font-black text-3xl md:text-4xl text-gold-400 mb-2">
+          Online Harmonium Practice
+        </h1>
+        <p class="text-ivory/60">Full-featured web harmonium — play, learn, and practice in your browser</p>
+      </div>
+
+      <!-- Main Harmonium -->
+      <Harmonium />
+
+      <!-- Instructions Card -->
+      <div class="mt-8 grid sm:grid-cols-3 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+          <h3 class="font-semibold text-gold-400 mb-3 flex items-center gap-2">
+            <span>⌨️</span> Keyboard Shortcuts
+          </h3>
+          <div class="text-xs text-ivory/60 space-y-1 font-mono">
+            <p><span class="text-ivory/80">A-L</span> → White keys (C to G)</p>
+            <p><span class="text-ivory/80">W,E,T,Y,U</span> → Black keys</p>
+            <p><span class="text-ivory/80">← →</span> → Change octave</p>
+            <p><span class="text-ivory/80">Multiple keys</span> → Chords</p>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+          <h3 class="font-semibold text-saffron-400 mb-3 flex items-center gap-2">
+            <span>📱</span> Mobile / Touch
+          </h3>
+          <div class="text-xs text-ivory/60 space-y-1">
+            <p>Tap any key to play</p>
+            <p>Hold for sustained note</p>
+            <p>Multi-touch for chords</p>
+            <p>Scroll to see all keys</p>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+          <h3 class="font-semibold text-green-400 mb-3 flex items-center gap-2">
+            <span>🎵</span> Practice Tips
+          </h3>
+          <div class="text-xs text-ivory/60 space-y-1">
+            <p>Start with Sa (C key / A)</p>
+            <p>Play Sa Re Ga Ma slowly</p>
+            <p>Use metronome for rhythm</p>
+            <p>Practice alankars daily</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scale Reference -->
+      <div class="mt-6 bg-white/5 border border-white/10 rounded-xl p-6">
+        <h2 class="font-display font-bold text-gold-400 mb-4">🎼 Sargam Reference — Indian & Western Notes</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="py-2 pr-4 text-ivory/50 font-medium">Western</th>
+                <th class="py-2 pr-4 text-ivory/50 font-medium">Indian (Devanagari)</th>
+                <th class="py-2 pr-4 text-ivory/50 font-medium">Indian (Roman)</th>
+                <th class="py-2 pr-4 text-ivory/50 font-medium">Keyboard Key</th>
+                <th class="py-2 text-ivory/50 font-medium">Frequency</th>
+              </tr>
+            </thead>
+            <tbody class="text-ivory/80">
+              {[
+                ['C', 'सा', 'Sa', 'A', '261.63 Hz'],
+                ['D', 'रे', 'Re', 'S', '293.66 Hz'],
+                ['E', 'ग', 'Ga', 'D', '329.63 Hz'],
+                ['F', 'म', 'Ma', 'F', '349.23 Hz'],
+                ['G', 'प', 'Pa', 'G', '392.00 Hz'],
+                ['A', 'ध', 'Dha', 'H', '440.00 Hz'],
+                ['B', 'नि', 'Ni', 'J', '493.88 Hz'],
+                ['C#', 'कोमल रे', 'Komal Re', 'W', '277.18 Hz'],
+                ['D#', 'कोमल ग', 'Komal Ga', 'E', '311.13 Hz'],
+                ['F#', 'तीव्र म', 'Tivra Ma', 'T', '369.99 Hz'],
+                ['G#', 'कोमल ध', 'Komal Dha', 'Y', '415.30 Hz'],
+                ['A#', 'कोमल नि', 'Komal Ni', 'U', '466.16 Hz'],
+              ].map(([w, d, r, k, f]) => (
+                <tr class="border-b border-white/5">
+                  <td class="py-2 pr-4 font-mono text-saffron-400">{w}</td>
+                  <td class="py-2 pr-4 font-[Tiro_Devanagari_Hindi]">{d}</td>
+                  <td class="py-2 pr-4">{r}</td>
+                  <td class="py-2 pr-4 font-mono bg-white/5 px-2 rounded text-center w-16">{k}</td>
+                  <td class="py-2 text-ivory/40 text-xs">{f}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Alankar Practice Patterns -->
+      <div class="mt-6 bg-white/5 border border-white/10 rounded-xl p-6">
+        <h2 class="font-display font-bold text-gold-400 mb-4">🔄 Quick Alankar Patterns</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {[
+            { name: 'Alankar 1 (Ascending)', pattern: 'S R G M P D N S̈', keys: 'A S D F G H J K' },
+            { name: 'Alankar 2 (Descending)', pattern: 'S̈ N D P M G R S', keys: 'K J H G F D S A' },
+            { name: 'Alankar 3 (Pairs)', pattern: 'SR RG GM MP PD DN NS̈', keys: 'AS SD DF FG GH HJ JK' },
+            { name: 'Alankar 4 (Triplets)', pattern: 'SRG RGM GMP MPD PDN DNS̈', keys: 'ASD SDF DFG FGH GHJ HJK' },
+          ].map(a => (
+            <div class="bg-black/20 rounded-lg p-4">
+              <h4 class="font-semibold text-ivory/90 text-sm mb-2">{a.name}</h4>
+              <p class="text-saffron-400 font-mono text-sm mb-1">{a.pattern}</p>
+              <p class="text-ivory/40 text-xs font-mono">Keys: {a.keys}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Back to lessons CTA -->
+      <div class="mt-8 text-center">
+        <a href="/lessons" class="inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold px-6 py-3 rounded-xl transition-all">
+          📖 View Structured Lessons
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
