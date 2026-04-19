@@ -1,94 +1,40 @@
 ---
-import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-
-export interface Props {
-  title: string;
-  description?: string;
-  image?: string;
-  type?: string;
-  noindex?: boolean;
-  schema?: object | object[];
-}
-
-const {
-  title,
-  description = 'Play a real harmonium online in your browser. Free structured lessons from beginner to advanced — Sa Re Ga Ma, alankars, ragas, bhajans. India\'s best free harmonium learning platform.',
-  image = '/og.png',
-  type = 'website',
-  noindex = false,
-  schema,
-} = Astro.props;
-
-const site    = 'https://www.harmoniumhalt.com';
-const canonical = new URL(Astro.url.pathname, site).href;
 ---
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-
-  <title>{title}</title>
-  <meta name="description" content={description}/>
-  <link rel="canonical" href={canonical}/>
-  {noindex
-    ? <meta name="robots" content="noindex,nofollow"/>
-    : <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
-  }
-
-  <!-- OG -->
-  <meta property="og:type"        content={type}/>
-  <meta property="og:url"         content={canonical}/>
-  <meta property="og:title"       content={title}/>
-  <meta property="og:description" content={description}/>
-  <meta property="og:image"       content={`${site}${image}`}/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta property="og:site_name"   content="Harmonium Halt"/>
-  <meta property="og:locale"      content="en_IN"/>
-
-  <!-- Twitter -->
-  <meta name="twitter:card"        content="summary_large_image"/>
-  <meta name="twitter:title"       content={title}/>
-  <meta name="twitter:description" content={description}/>
-  <meta name="twitter:image"       content={`${site}${image}`}/>
-
-  <!-- Icons -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-  <link rel="manifest" href="/site.webmanifest"/>
-  <meta name="theme-color" content="#3d1a08"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
-  <!-- Base Schema -->
-  <script type="application/ld+json">{JSON.stringify({
-    "@context":"https://schema.org",
-    "@graph":[
-      {"@type":"Organization","@id":`${site}/#org`,"name":"Harmonium Halt","url":site,
-       "logo":{"@type":"ImageObject","url":`${site}/favicon.svg`},
-       "description":"India's premier free online harmonium learning platform."},
-      {"@type":"WebSite","@id":`${site}/#website`,"url":site,"name":"Harmonium Halt",
-       "description":"Play Online Web Harmonium, Learn Easily, Practice Daily",
-       "publisher":{"@id":`${site}/#org`}}
-    ]
-  })}</script>
-
-  {schema && (
-    <script type="application/ld+json" set:html={JSON.stringify(schema)}/>
-  )}
-</head>
-<body>
-  <Navbar/>
-  <main id="main-content">
-    <slot/>
-  </main>
-  <Footer/>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v4.0.0" />
+    <title><slot name="title" /></title>
+    <meta name="description" content="Play Online Instruments, Learn Easily, Practice Daily" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.heliumdock.com/" />
+    <meta property="og:title" content="Helium Dock - Online Music Learning Platform" />
+    <meta property="og:description" content="Play Online Instruments, Learn Easily, Practice Daily" />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.heliumdock.com/" />
+    <meta property="twitter:title" content="Helium Dock - Online Music Learning Platform" />
+    <meta property="twitter:description" content="Play Online Instruments, Learn Easily, Practice Daily" />
+    <meta property="twitter:image" content="/images/og-image.jpg" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.heliumdock.com/" />
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+    <Navbar />
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

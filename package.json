@@ -1,16 +1,26 @@
 {
-  "name": "harmonium-halt",
-  "type": "module",
+  "name": "heliumdock",
+  "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "astro": "^4.15.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "tailwindcss": "^3.4.10"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tone": "^14.7.77"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
   }
 }
